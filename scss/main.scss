@@ -1,0 +1,46 @@
+@import "components";
+@import "custom";
+@import "mixins";
+@import "responsive";
+@import "variables";
+@import "landingPage";
+// ----------------------------------------------------Common Classes-----------------------------------------------------//
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @include body;
+}
+
+.nopad {
+    @include nopad;
+}
+
+.flex-center {
+    @include flex-cntr;
+}
+
+.align-cntr {
+    @include align-cntr;
+}
+@font-face {
+    font-family: "Akkurat";
+    font-weight: 400;
+    src: url("../fonts/Akkurat.ttf");
+}
+@font-face {
+    font-family: "Akkurat";
+    font-weight: 300;
+    src: url("../fonts/Akkurat_Light.ttf");
+}
+@font-face {
+    font-family: "Akkurat";
+    font-weight: 700;
+    src: url("../fonts/Akkurat_Bold.ttf");
+}
+@font-face {
+    font-family: "IvyMode";
+    font-weight: 400;
+    src: url("../fonts/IvyMode_Regular.ttf");
+}

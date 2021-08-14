@@ -1,0 +1,94 @@
+@import "variables";
+@import "mixins";
+// ----------------------------------------------------Text-----------------------------------------------------//
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+h4 {
+    font-size: $h4;
+}
+
+h5 {
+    font-size: $h5;
+}
+
+h6 {
+    font-size: $h6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $ivymode;
+}
+p,
+a,
+span,
+label {
+    font-family: $akkurat;
+}
+p {
+    font-size: $p;
+}
+
+a {
+    font-size: $p;
+    text-decoration: none;
+    transition: all 0.1s ease-out;
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+        transition: all 0.5s ease-out;
+        outline: 0;
+    }
+}
+
+// ----------------------------------------------------Button-----------------------------------------------------//
+button {
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        outline: 0;
+    }
+}
+
+.btn-primary {
+    @include buttn($primary, $white, $primary);
+}
+
+.btn-secondary {
+    @include buttn($secondary, $white, $secondary);
+}
+
+.btn-tertiary {
+    @include buttn($tertiary, $white, $tertiary);
+}
+
+.btn-primary-outline {
+    @include buttn-outline($white, $primary, $primary);
+}
+
+.btn-secondary-outline {
+    @include buttn-outline($white, $secondary, $secondary);
+}
+
+.btn-secondary-outline {
+    @include buttn-outline($white, $tertiary, $tertiary);
+}

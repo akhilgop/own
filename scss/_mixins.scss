@@ -1,0 +1,112 @@
+@import "variables";
+// ----------------------------------------------------Mixins Library-----------------------------------------------------
+@mixin p-white {
+    color: $white;
+}
+
+@mixin p-white-cntr {
+    color: $white;
+    text-align: center;
+}
+
+@mixin a-white {
+    color: $white;
+    text-decoration: none;
+}
+
+@mixin buttn($bg, $color, $bdr) {
+    background: $bg;
+    color: $color;
+    border: 1px solid $bdr;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken($color: $bg, $amount: 10%);
+    }
+}
+
+@mixin buttn-outline($bg, $color, $bdr) {
+    background: $bg;
+    color: $color;
+    border: 1px solid $bdr;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken($color: $color, $amount: 10%);
+        color: $bg;
+    }
+}
+
+@mixin btn-rounded {
+    border-radius: 50%;
+}
+
+@mixin btn-sharp {
+    border-radius: 0;
+}
+
+@mixin btn-block {
+    width: 100%;
+}
+
+@mixin image {
+    width: 100%;
+}
+
+@mixin align-cntr {
+    margin: auto;
+    text-align: center;
+}
+
+@mixin flex-cntr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin nopad {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+@mixin both-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+
+@mixin body {
+    overflow-x: hidden;
+}
+
+@mixin circle($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+    @include flex-cntr;
+}
