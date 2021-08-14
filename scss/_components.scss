@@ -6,7 +6,8 @@ h1 {
 }
 
 h2 {
-    font-size: $h2;
+    font-size: $h2 !important;
+    margin-bottom: 100px !important;
 }
 
 h3 {
@@ -24,12 +25,17 @@ h5 {
 h6 {
     font-size: $h6;
 }
+
+p {
+    font-size: $p;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    font-weight: 700;
     font-family: $ivymode;
 }
 p,
@@ -45,7 +51,7 @@ p {
 a {
     font-size: $p;
     text-decoration: none;
-    transition: all 0.1s ease-out;
+    transition: all 0.5s ease-out;
     &:hover,
     &:active,
     &:focus {
@@ -91,4 +97,58 @@ button {
 
 .btn-secondary-outline {
     @include buttn-outline($white, $tertiary, $tertiary);
+}
+// ----------------------------------------------------Form Control-----------------------------------------------------//
+
+.form-check-input:checked {
+    background-color: $primary;
+    border-color: $primary;
+    box-shadow: none;
+}
+.form-check-inline {
+    margin-right: 30px;
+}
+// ----------------------------------------------------Form Control-----------------------------------------------------//
+.form-control {
+    border: none !important;
+    border-bottom: 1px solid $gray1 !important;
+    border-radius: 0 !important;
+    padding-left: 0 !important;
+    font-size: 24px !important;
+    &:focus {
+        // border: 1px solid $primary !important;
+        border-bottom: 2px solid $primary !important;
+        box-shadow: none !important;
+        outline: 0 !important;
+        padding-left: 15px !important;
+    }
+}
+label {
+    font-family: $akkurat;
+    @include text(24px, 24px, 400, $black);
+}
+textarea {
+    resize: none !important;
+}
+// ----------------------------------------------------Placeholder-----------------------------------------------------//
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $border;
+    opacity: 0.5;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba($color: $border, $alpha: 0.5);
+    opacity: 0.5;
+}
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $border;
+    opacity: 0.5;
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: $border;
+    opacity: 0.5;
 }

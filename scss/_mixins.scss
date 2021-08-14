@@ -71,7 +71,10 @@
     justify-content: center;
     align-items: center;
 }
-
+@mixin flex-v-cntr {
+    display: flex;
+    align-items: center;
+}
 @mixin nopad {
     margin: 0 !important;
     padding: 0 !important;
@@ -104,9 +107,19 @@
     overflow-x: hidden;
 }
 
-@mixin circle($width, $height) {
-    width: $width;
-    height: $height;
+@mixin circle($unit, $bg) {
+    width: $unit;
+    height: $unit;
     border-radius: 50%;
+    background-color: $bg;
     @include flex-cntr;
+}
+@mixin text($fs, $lh, $fw, $clr) {
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+    color: $clr;
+}
+@mixin box-shadow($r, $b, $g, $opacity) {
+    box-shadow: 0px 1px 6px rgba($r, $b, 0$g, $opacity);
 }

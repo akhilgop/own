@@ -7,7 +7,7 @@ window.addEventListener('scroll', function (event) { // To listen for event
         nav.style.boxShadow = 'none !important';
     } else {
         nav.style.backgroundColor = '#fff';
-        nav.style.boxShadow = '0 0 4px grey';
+        nav.style.boxShadow = '0px 1px 6px rgba(0, 0, 0, 0.1)';
         nav.style.height = '80px';
     }
 });
