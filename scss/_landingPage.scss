@@ -379,6 +379,13 @@
             position: relative;
             span {
                 @include circle(70px, $primary);
+                right: -80px;
+                top: -16px;
+                svg {
+                    path {
+                        fill: $white;
+                    }
+                }
             }
         }
     }
@@ -436,5 +443,8 @@
                 }
             }
         }
+    }
+    textarea {
+        margin-bottom: 50px;
     }
 }
