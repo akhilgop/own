@@ -1,0 +1,554 @@
+// ----------------------------------------------------------------Image Container---------------------------------------------------------------//
+.img-container {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+.bg-image {
+    background-position: center;
+    @include bg-cover-nrp;
+}
+// ----------------------------------------------------------------Card Box---------------------------------------------------------------//
+.card-box {
+    padding: 30px;
+    background-color: $white;
+    border-radius: $bdr-rds2;
+    box-shadow: $box-shadow;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+// ----------------------------------------------------------------Color Shades---------------------------------------------------------------//
+.bg-primary {
+    background-color: $primary !important;
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label,
+    span {
+        color: $white;
+    }
+}
+.bg-secondary {
+    background-color: $secondary !important;
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label,
+    span {
+        color: $white;
+    }
+}
+.bg-tertiary {
+    background-color: $tertiary;
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label,
+    span {
+        color: $white;
+    }
+}
+.bg-black {
+    background-color: $black;
+}
+.bg-white {
+    background-color: $white;
+}
+.bg-light {
+    background-color: $white6;
+}
+.bg-primary-light {
+    background-color: rgba($color: $primary, $alpha: 0.1);
+}
+.bg-secondary-light {
+    background-color: rgba($color: $secondary, $alpha: 0.1);
+}
+.bg-tertiary-light {
+    background-color: rgba($color: $tertiary, $alpha: 0.1);
+}
+.bg-white-light9 {
+    background-color: $white9;
+}
+.bg-white-light8 {
+    background-color: $white8;
+}
+.bg-white-light7 {
+    background-color: $white7;
+}
+.bg-white-light6 {
+    background-color: $white6;
+}
+.bg-white-light5 {
+    background-color: $white5;
+}
+.bg-white-light4 {
+    background-color: $white4;
+}
+.bg-white-light3 {
+    background-color: $white3;
+}
+.bg-white-light2 {
+    background-color: $white2;
+}
+.bg-white-light1 {
+    background-color: $white1;
+}
+// ----------------------------------------------------------------Text---------------------------------------------------------------//
+.text-white {
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label,
+    span {
+        color: $white;
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+        color: $white;
+    }
+}
+.text-normal {
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label,
+    span {
+        color: $body-color;
+    }
+}
+.custom-h {
+    margin-bottom: 30px;
+    span {
+        color: $primary;
+        font-weight: 600;
+    }
+}
+.text-cntr {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+// ----------------------------------------------------------------Media Show & Hide---------------------------------------------------------------//
+.media-hide {
+    display: block;
+}
+.media-show {
+    display: none;
+}
+// ----------------------------------------------------------------Button Wrapper---------------------------------------------------------------//
+.btn-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    .btn {
+        margin-right: 20px;
+    }
+    .btn:last-child {
+        margin-right: 0px;
+    }
+}
+.block-btn-wrapper {
+    .btn {
+        width: 100% !important;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
+// ----------------------------------------------------------------Responsive Padding---------------------------------------------------------------//
+.resp-pad-rb10 {
+    padding-right: 10px;
+}
+.resp-pad-rb20 {
+    padding-right: 20px;
+}
+.resp-pad-rb30 {
+    padding-right: 30px;
+}
+.resp-pad-rb40 {
+    padding-right: 40px;
+}
+.resp-pad-rb50 {
+    padding-right: 50px;
+}
+.resp-pad-lb10 {
+    padding-left: 10px;
+}
+.resp-pad-lb20 {
+    padding-left: 20px;
+}
+.resp-pad-lb30 {
+    padding-left: 30px;
+}
+.resp-pad-lb40 {
+    padding-left: 40px;
+}
+.resp-pad-lb50 {
+    padding-left: 50px;
+}
+// ----------------------------------------------------------------Responsive Margin-------------------------------------------------------------//
+.resp-mgn-rb10 {
+    margin-right: 10px;
+}
+.resp-mgn-rb20 {
+    margin-right: 20px;
+}
+.resp-mgn-rb30 {
+    margin-right: 30px;
+}
+.resp-mgn-rb40 {
+    margin-right: 40px;
+}
+.resp-mgn-rb50 {
+    margin-right: 50px;
+}
+.resp-mgn-lb10 {
+    margin-left: 10px;
+}
+.resp-mgn-lb20 {
+    margin-left: 20px;
+}
+.resp-mgn-lb30 {
+    margin-left: 30px;
+}
+.resp-mgn-lb40 {
+    margin-left: 40px;
+}
+.resp-mgn-lb50 {
+    margin-left: 50px;
+}
+// ----------------------------------------------------------------General Classes-----------------------------------------------------------//
+// section {
+//     padding: 100px 0;
+// }
+.f-left {
+    float: left;
+}
+.f-right {
+    float: right;
+}
+.clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+// ----------------------------------------------------------------Responsive Classes-----------------------------------------------------------//
+@media screen and (max-width: 991px) {
+    .media-show {
+        display: block;
+    }
+    .media-hide {
+        display: none;
+    }
+    h1 {
+        font-size: calc(0.66 * #{$h1});
+    }
+    h2 {
+        font-size: calc(0.66 * #{$h2});
+    }
+    p,
+    a {
+        font-size: calc(#{$p} - 2px);
+        line-height: calc((calc(#{$p} - 2px)) * 2);
+    }
+    .btn {
+        height: 40px;
+        padding: 0 20px;
+    }
+    .resp-pad-rb10 {
+        padding-right: 0px;
+        padding-bottom: 10px;
+    }
+    .resp-pad-rb20 {
+        padding-right: 0px;
+        padding-bottom: 20px;
+    }
+    .resp-pad-rb30 {
+        padding-right: 0px;
+        padding-bottom: 30px;
+    }
+    .resp-pad-rb40 {
+        padding-right: 0px;
+        padding-bottom: 40px;
+    }
+    .resp-pad-rb50 {
+        padding-right: 0px;
+        padding-bottom: 50px;
+    }
+    .resp-pad-lb10 {
+        padding-left: 0px;
+        padding-bottom: 10px;
+    }
+    .resp-pad-lb20 {
+        padding-left: 0px;
+        padding-bottom: 20px;
+    }
+    .resp-pad-lb30 {
+        padding-left: 0px;
+        padding-bottom: 30px;
+    }
+    .resp-pad-lb40 {
+        padding-left: 0px;
+        padding-bottom: 40px;
+    }
+    .resp-pad-lb50 {
+        padding-left: 0px;
+        padding-bottom: 50px;
+    }
+    .resp-mgn-rb10 {
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    .resp-mgn-rb20 {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .resp-mgn-rb30 {
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+    .resp-mgn-rb40 {
+        margin-right: 0px;
+        margin-bottom: 40px;
+    }
+    .resp-mgn-rb50 {
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+    .resp-mgn-lb10 {
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+    .resp-mgn-lb20 {
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .resp-mgn-lb30 {
+        margin-left: 0px;
+        margin-bottom: 30px;
+    }
+    .resp-mgn-lb40 {
+        margin-left: 0px;
+        margin-bottom: 40px;
+    }
+    .resp-mgn-lb50 {
+        margin-left: 0px;
+        margin-bottom: 50px;
+    }
+    section {
+        padding: 50px 0;
+    }
+    .nav-item {
+        margin-right: 0px;
+    }
+}
+// ----------------------------------------------------Arrow Link with Blue Circle on Hover-----------------------------------------------------//
+.link-common {
+    position: relative;
+    text-decoration: none;
+    @include flex-v-cntr;
+    @include text(30px, 30px, 400, $gray3);
+    transition: all 0.5s ease-out;
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        svg {
+            width: 20px;
+            margin-left: 30px;
+        }
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        color: $white;
+        text-decoration: none;
+        transition: all 0.5s ease-out;
+        position: relative;
+        span {
+            @include circle(130px, $primary);
+            font-weight: 700 !important;
+            position: absolute;
+            right: 0;
+            transition: all 0.5s ease-out;
+            svg {
+                margin: 0;
+            }
+        }
+    }
+}
+// ----------------------------------------------------Horizondal Text Slider with Large Text-----------------------------------------------------//
+
+.horizondal-ul {
+    ul {
+        position: relative;
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        @include text(72px, 140px, 300, $black);
+        font-family: $akkurat;
+        margin-bottom: 50px !important;
+        position: relative;
+        display: inline;
+        margin-right: 200px;
+        &:before {
+            border-top: 1px solid #7d7d7d;
+            content: "";
+            position: absolute;
+            top: 45px;
+            left: -110px;
+            width: 90px;
+            height: 1px;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            transition: all 0.5s ease-out;
+            opacity: 1;
+        }
+    }
+    li.fade {
+        opacity: 0.4;
+    }
+}
+// --------------------------------------------------------------Scroll Counter------------------------------------------------------------//
+.scroll-counter {
+    margin-top: 200px;
+    .counter-txt {
+        display: flex;
+        h3 {
+            font-family: $akkurat;
+            @include text(100px, 100px, 300, $white);
+        }
+        h3.fade {
+            opacity: 0.1;
+        }
+        span {
+            @include text(100px, 100px, 300, $white);
+            opacity: 0.1;
+            margin: 0 20px;
+        }
+    }
+
+    ul {
+        position: relative;
+        list-style: none;
+        li {
+            @include text(40px, 56px, 300, $white);
+            font-family: $akkurat;
+            margin-bottom: 50px;
+            opacity: 0.4;
+            position: relative;
+            &:before {
+                border-top: 1px solid #7d7d7d;
+                content: "";
+                position: absolute;
+                top: 25px;
+                left: -110px;
+                width: 90px;
+                height: 1px;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                transition: all 0.5s ease-out;
+                opacity: 1;
+            }
+        }
+        li.fade {
+            opacity: 0.4;
+        }
+    }
+}
+// --------------------------------------------------------------------------Card--------------------------------------------------------------------//
+.card-section {
+    padding: 50px;
+    background-color: $grey4;
+    h6 {
+        margin: 50px 0;
+        @include text(40px, 40px, 700, $black);
+        font-family: $akkurat;
+    }
+    p {
+        @include text(18px, 36px, 400, $body-color);
+    }
+}
+// --------------------------------------------------------------------------UI-panel--------------------------------------------------------------------//
+.ui-panel {
+    padding: 150px 100px;
+    position: relative;
+    .quote {
+        position: absolute;
+        top: 0;
+    }
+    .main-content {
+        p {
+            @include text(40px, 80px, 300, $white);
+        }
+    }
+}
+.bg-black {
+    background-color: $secondary;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1700px) {
+}
+
+@media screen and (min-width: 1701px) and (max-width: 1920px) {
+}
+
+@media screen and (min-width: 1921px) {
+}
+@media screen and (min-width: 1700px) {
+    .container {
+        max-width: 1620px !important;
+    }
+}

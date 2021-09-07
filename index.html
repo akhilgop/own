@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="scss/main.css" type="text/css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -15,138 +16,141 @@
 </head>
 
 <body>
-    <!-- -------------------------------------------------------------------Navbar----------------------------------------------------------------->
-    <nav class="navbar navbar-expand-lg nb ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">
 
-                <svg version="1.1" id="Component_7_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50"
-                    style="enable-background:new 0 0 50 50;" xml:space="preserve" width="50px" height="50px">
-                    <style type="text/css">
-                        .logo-css {
-                            fill: none;
-                            stroke: #FFFFFF;
-                            stroke-width: 1.5;
-                            stroke-linecap: round;
-                        }
-                    </style>
-                    <circle id="Ellipse_26" cx="25" cy="25" r="25" />
-                    <g id="Group_16" transform="translate(12.777 13.899)">
-                        <g id="Group_1">
-                            <line id="Line_1" class="logo-css" x1="0" y1="10.8" x2="6.8" y2="17.7" />
-                            <line id="Line_4" class="logo-css" x1="0.4" y1="10.8" x2="7.7" y2="10.8" />
-                            <line id="Line_8" class="logo-css" x1="17.1" y1="10.4" x2="24.3" y2="10.4" />
-                            <line id="Line_2" class="logo-css" x1="10.9" y1="0" x2="0.1" y2="10.4" />
-                            <line id="Line_6" class="logo-css" x1="24.4" y1="10.4" x2="14" y2="22.2" />
-                            <line id="Line_7" class="logo-css" x1="20.5" y1="7" x2="14" y2="0" />
-                            <line id="Line_3" class="logo-css" x1="10.9" y1="0" x2="10.9" y2="22.2" />
-                            <line id="Line_5" class="logo-css" x1="14" y1="0" x2="14" y2="22.2" />
-                        </g>
-                    </g>
-                </svg>
-            </a>
-
-            <a href="" class="menu-button">
-                <svg version=" 1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 41 28"
-                    style="enable-background:new 0 0 41 28;" xml:space="preserve" width="38px" height="25px">
-                    <style type="text/css">
-                        .menu-icn {
-                            fill: none;
-                            stroke: #000;
-                            stroke-width: 3;
-                            stroke-linecap: round;
-                            stroke-linejoin: round;
-                        }
-                    </style>
-                    <g id="Page-1" transform="translate(0.5 0.5)">
-                        <g id="Artboard" transform="translate(1 1)">
-                            <g id="menu" transform="translate(0)">
-                                <path id="Shape" class="menu-icn" d="M0,12.5h38" />
-                                <path id="Shape-2" class="menu-icn" d="M0,0h38" />
-                                <path id="Shape-3" class="menu-icn" d="M0,25h38" />
+    <div class="scroll-wrapper">
+        <!-- -------------------------------------------------------------------Navbar----------------------------------------------------------------->
+        <nav class="navbar navbar-expand-lg nb ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">
+                    <svg version="1.1" id="Component_7_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50"
+                        style="enable-background:new 0 0 50 50;" xml:space="preserve" width="50px" height="50px">
+                        <style type="text/css">
+                            .logo-css {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 1.5;
+                                stroke-linecap: round;
+                            }
+                        </style>
+                        <circle id="Ellipse_26" cx="25" cy="25" r="25" />
+                        <g id="Group_16" transform="translate(12.777 13.899)">
+                            <g id="Group_1">
+                                <line id="Line_1" class="logo-css" x1="0" y1="10.8" x2="6.8" y2="17.7" />
+                                <line id="Line_4" class="logo-css" x1="0.4" y1="10.8" x2="7.7" y2="10.8" />
+                                <line id="Line_8" class="logo-css" x1="17.1" y1="10.4" x2="24.3" y2="10.4" />
+                                <line id="Line_2" class="logo-css" x1="10.9" y1="0" x2="0.1" y2="10.4" />
+                                <line id="Line_6" class="logo-css" x1="24.4" y1="10.4" x2="14" y2="22.2" />
+                                <line id="Line_7" class="logo-css" x1="20.5" y1="7" x2="14" y2="0" />
+                                <line id="Line_3" class="logo-css" x1="10.9" y1="0" x2="10.9" y2="22.2" />
+                                <line id="Line_5" class="logo-css" x1="14" y1="0" x2="14" y2="22.2" />
                             </g>
                         </g>
-                    </g>
-                </svg>
-            </a>
-        </div>
-    </nav>
-    <!-- -------------------------------------------------------------------Banner----------------------------------------------------------------->
-    <section class="banner">
-        <div class="container">
-            <h1>Hi, I’m <br>
-                Akhil Gopi<br>
-                UX - UI Designer</h1>
-        </div>
-    </section>
-    <!-- -------------------------------------------------------------------About----------------------------------------------------------------->
-    <section class="about-brief">
-        <div class="row">
-            <div class="col-lg-9">
-                <div class="left-panel">
-                    <p>I’ve always been fascinated by the role played by design in digital products. I strive
-                        for achiving progressive user experiences for the imminent user needs.
-                        Continuously learning to build empathy with people and mediums that help them
-                        achieve more. I am an avid tech reader and a stern tech enthusiast.
-                        <br><br>
-                        I’ve had good exposure to work with different facets in design and business
-                        domains. I’ve worked on emerging markets; consumer experiences and enterprise
-                        solutions; Android, iOS app user experiences; chat, communication platform; EMR,
-                        healthcare; motion design, intelligence, and information visualization; design
-                        strategy and management; user research.
-                    </p>
-                    <div class="know-more-section">
-                        <a href="">Know more about me <span>
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                                    style="enable-background:new 0 0 25 12;" xml:space="preserve" width="17px"
-                                    height="34px">
-                                    <style type="text/css">
-                                        .arrow-icn {
-                                            fill: #fff;
-                                        }
-                                    </style>
-                                    <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                        <path id="Path_99" class="arrow-icn" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+                    </svg>
+                </a>
+
+                <a href="" class="menu-button">
+                    <svg version=" 1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 41 28"
+                        style="enable-background:new 0 0 41 28;" xml:space="preserve" width="38px" height="25px">
+                        <style type="text/css">
+                            .menu-icn {
+                                fill: none;
+                                stroke: #000;
+                                stroke-width: 3;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                            }
+                        </style>
+                        <g id="Page-1" transform="translate(0.5 0.5)">
+                            <g id="Artboard" transform="translate(1 1)">
+                                <g id="menu" transform="translate(0)">
+                                    <path id="Shape" class="menu-icn" d="M0,12.5h38" />
+                                    <path id="Shape-2" class="menu-icn" d="M0,0h38" />
+                                    <path id="Shape-3" class="menu-icn" d="M0,25h38" />
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <!-- -------------------------------------------------------------------Banner----------------------------------------------------------------->
+        <section class="banner">
+            <div class="container">
+                <h1 data-scroll data-scroll-speed="1">Hi, I’m <br>
+                    Akhil Gopi<br>
+                    UX - UI Designer</h1>
+            </div>
+        </section>
+
+        <!-- -------------------------------------------------------------------About----------------------------------------------------------------->
+        <section class="about-brief">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="left-panel">
+                        <p>I’ve always been fascinated by the role played by design in digital products. I strive
+                            for achiving progressive user experiences for the imminent user needs.
+                            Continuously learning to build empathy with people and mediums that help them
+                            achieve more. I am an avid tech reader and a stern tech enthusiast.
+                            <br><br>
+                            I’ve had good exposure to work with different facets in design and business
+                            domains. I’ve worked on emerging markets; consumer experiences and enterprise
+                            solutions; Android, iOS app user experiences; chat, communication platform; EMR,
+                            healthcare; motion design, intelligence, and information visualization; design
+                            strategy and management; user research.
+                        </p>
+                        <div class="know-more-section">
+                            <a href="" class="a-animate">Know more about me <span>
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
+                                        style="enable-background:new 0 0 25 12;" xml:space="preserve" width="17px"
+                                        height="34px">
+                                        <style type="text/css">
+                                            .arrow-icn {
+                                                fill: #fff;
+                                            }
+                                        </style>
+                                        <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                            <path id="Path_99" class="arrow-icn" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
 		c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                        <path id="Path_100" class="arrow-icn" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+                                            <path id="Path_100" class="arrow-icn" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
 		c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                        <path id="Path_101" class="arrow-icn"
-                                            d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                                    </g>
-                                </svg>
-                            </span>
-                        </a>
-                        <div class="underline-div"></div>
+                                            <path id="Path_101" class="arrow-icn"
+                                                d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                            <div class="underline-div"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="right-panel">
-                    <div class="position-div">
-                        <div class="social-links">
-                            <a href="" class="link-social">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25.1 24"
-                                    style="enable-background:new 0 0 25.1 24;" xml:space="preserve" width="25px">
-                                    <path id="Path_5"
-                                        d="M5.7,7.8V24H0.3V7.8H5.7z M6.1,2.8C6.1,2.8,6.1,2.9,6.1,2.8c0,0.8-0.3,1.5-0.8,2l0,0C4.7,5.3,3.9,5.6,3.2,5.6
+                <div class="col-lg-3">
+                    <div class="right-panel">
+                        <div class="position-div">
+                            <div class="social-links">
+                                <a href="" class="link-social link-animate">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25.1 24"
+                                        style="enable-background:new 0 0 25.1 24;" xml:space="preserve" width="25px">
+                                        <path id="Path_5"
+                                            d="M5.7,7.8V24H0.3V7.8H5.7z M6.1,2.8C6.1,2.8,6.1,2.9,6.1,2.8c0,0.8-0.3,1.5-0.8,2l0,0C4.7,5.3,3.9,5.6,3.2,5.6
         c0,0-0.1,0-0.1,0h0c0,0-0.1,0-0.1,0c-0.8,0-1.5-0.3-2-0.8l0,0C0.3,4.3,0,3.6,0,2.9c0,0,0,0,0-0.1l0,0c0,0,0,0,0-0.1
         C0,2,0.3,1.3,0.8,0.8l0,0C1.4,0.3,2.1,0,2.9,0C3,0,3,0,3,0h0c0,0,0.1,0,0.1,0c0.8,0,1.5,0.3,2,0.8l0,0C5.8,1.3,6.1,2,6.1,2.8
         L6.1,2.8L6.1,2.8z M25.1,14.7V24h-5.4v-8.7c0-0.1,0-0.2,0-0.3c0-0.9-0.2-1.7-0.7-2.4l0,0c-0.4-0.6-1.1-1-1.9-1c-0.1,0-0.1,0-0.2,0h0
         h-0.1c-0.6,0-1.2,0.2-1.6,0.6h0c-0.5,0.4-0.8,0.8-1,1.4l0,0c-0.1,0.4-0.2,0.8-0.2,1.2c0,0,0,0.1,0,0.1v9H8.7c0-4.3,0-7.9,0-10.6
         s0-4.3,0-4.8l0-0.8h5.4v2.4h0c0.2-0.3,0.4-0.6,0.7-0.9l0,0c0.3-0.3,0.6-0.6,0.9-0.8l0,0C16,8.1,16.5,7.8,17,7.7l0,0
         c0.6-0.2,1.2-0.3,1.8-0.3h0.1c0.1,0,0.2,0,0.2,0c1.6,0,3.2,0.7,4.3,1.9l0,0C24.6,10.8,25.2,12.8,25.1,14.7L25.1,14.7z" />
-                                </svg>
-                            </a>
+                                    </svg>
+                                </a>
 
-                            <a href="" class="link-social gap-lr-25">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32.2 20.3"
-                                    style="enable-background:new 0 0 32.2 20.3;" xml:space="preserve" width="25px">
-                                    <path id="Path_4" d="M29.1,1h-8.2v2.3h8.2L29.1,1z M27.4,16.6c-0.6,0.4-1.3,0.6-2.1,0.6c-1,0.1-2-0.2-2.7-0.9c-0.7-0.8-1-1.8-1-2.8
+                                <a href="" class="link-social gap-lr-25 link-animate">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 32.2 20.3" style="enable-background:new 0 0 32.2 20.3;"
+                                        xml:space="preserve" width="25px">
+                                        <path id="Path_4" d="M29.1,1h-8.2v2.3h8.2L29.1,1z M27.4,16.6c-0.6,0.4-1.3,0.6-2.1,0.6c-1,0.1-2-0.2-2.7-0.9c-0.7-0.8-1-1.8-1-2.8
         h10.7c0.1-1.1,0-2.2-0.3-3.2c-0.2-1-0.7-1.9-1.3-2.8c-0.6-0.8-1.4-1.5-2.3-1.9c-1-0.5-2.1-0.7-3.2-0.7c-1,0-2.1,0.2-3.1,0.6
         c-0.9,0.4-1.7,0.9-2.4,1.6c-0.7,0.7-1.2,1.5-1.5,2.4c-0.4,1-0.5,2-0.5,3.1c0,1.1,0.2,2.1,0.5,3.1c0.3,0.9,0.8,1.7,1.4,2.5
         c0.7,0.7,1.5,1.3,2.3,1.6c1,0.4,2.1,0.6,3.1,0.5c1.5,0,3-0.3,4.2-1.1c1.3-0.9,2.2-2.3,2.6-3.8h-3.6C28.2,15.9,27.8,16.4,27.4,16.6
@@ -157,14 +161,14 @@
         c0.4,0,0.8,0,1.1,0.1c0.3,0.1,0.7,0.2,1,0.4c0.3,0.2,0.5,0.4,0.7,0.7c0.2,0.4,0.3,0.8,0.3,1.2c0.1,0.7-0.2,1.4-0.8,1.9
         C10.3,8,9.7,8.2,9,8.2H4.5V3.5z M12.2,15.4c-0.2,0.3-0.4,0.6-0.7,0.8c-0.3,0.2-0.7,0.3-1,0.4c-0.4,0.1-0.8,0.1-1.3,0.1H4.4v-5.5h4.8
         c0.8,0,1.6,0.2,2.3,0.7c0.6,0.6,1,1.4,0.9,2.2C12.5,14.6,12.4,15,12.2,15.4z" />
-                                </svg>
-                            </a>
+                                    </svg>
+                                </a>
 
-                            <a href="" class="link-social">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 25"
-                                    style="enable-background:new 0 0 25 25;" xml:space="preserve" width="25px">
-                                    <path id="Path_102" d="M12.5,6.1C9,6.1,6.1,9,6.1,12.5s2.9,6.4,6.4,6.4s6.4-2.9,6.4-6.4v0C18.9,9,16,6.1,12.5,6.1z M12.5,16.7
+                                <a href="" class="link-social link-animate">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 25"
+                                        style="enable-background:new 0 0 25 25;" xml:space="preserve" width="25px">
+                                        <path id="Path_102" d="M12.5,6.1C9,6.1,6.1,9,6.1,12.5s2.9,6.4,6.4,6.4s6.4-2.9,6.4-6.4v0C18.9,9,16,6.1,12.5,6.1z M12.5,16.7
         c-2.3,0-4.2-1.9-4.2-4.2s1.9-4.2,4.2-4.2s4.2,1.9,4.2,4.2c0,0,0,0,0,0C16.7,14.8,14.8,16.7,12.5,16.7z M20.7,5.8
         c0,0.8-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5l0,0C20,4.3,20.7,5,20.7,5.8z M24.3,4.3c-0.3-0.8-0.8-1.6-1.4-2.2
         c-0.6-0.6-1.4-1.1-2.2-1.4c-1-0.4-2-0.6-3-0.6C16.3,0,15.9,0,12.5,0S8.7,0,7.3,0.1c-1,0-2.1,0.2-3,0.6C3.5,1,2.7,1.5,2.1,2.1
@@ -176,41 +180,42 @@
         c0-0.8,0.2-1.6,0.4-2.3c0.2-0.5,0.5-1,0.9-1.4C4.1,3.3,4.6,3,5.1,2.8c0.7-0.3,1.5-0.4,2.3-0.4c1.3-0.1,1.7-0.1,5.1-0.1
         s3.7,0,5.1,0.1c0.8,0,1.6,0.2,2.3,0.4c1.1,0.4,2,1.3,2.4,2.4c0.3,0.7,0.4,1.5,0.4,2.3c0.1,1.3,0.1,1.7,0.1,5.1S22.7,16.2,22.7,17.6z
         " />
-                                </svg>
-                            </a>
+                                    </svg>
+                                </a>
 
+                            </div>
+                            <div class="img-container">
+                                <img class="img-respornsive" src="images/me.png" alt="me-image">
+                            </div>
                         </div>
-                        <div class="img-container">
-                            <img class="img-respornsive" src="images/me.png" alt="me-image">
-                        </div>
+
                     </div>
 
                 </div>
-
             </div>
-        </div>
 
-    </section>
-    <!-- -------------------------------------------------------------------Services----------------------------------------------------------------->
-    <section class="services">
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="row">
-                <div class="col-xl-4">
-                    <a href="" class="service-link">
-                        <div class="card-section">
-                            <div class="icon">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 417.7 391.6"
-                                    style="enable-background:new 0 0 417.7 391.6;" xml:space="preserve" width="62px">
-                                    <style type="text/css">
-                                        .ux-d {
-                                            fill: #000;
-                                        }
-                                    </style>
-                                    <g id="UX" transform="translate(0 -16)">
-                                        <g id="Group_91" transform="translate(0 16)">
-                                            <path id="Path_116" class="ux-d" d="M343.4,136.9c0-0.8,0-1.5,0-2.3C343.5,60.4,283.1,0,208.8,0S74.2,60.4,74.2,134.6
+        </section>
+        <!-- -------------------------------------------------------------------Services----------------------------------------------------------------->
+        <section class="services">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="row">
+                    <div class="col-xl-4">
+                        <a href="" class="service-link">
+                            <div class="card-section">
+                                <div class="icon">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 417.7 391.6" style="enable-background:new 0 0 417.7 391.6;"
+                                        xml:space="preserve" width="62px">
+                                        <style type="text/css">
+                                            .ux-d {
+                                                fill: #000;
+                                            }
+                                        </style>
+                                        <g id="UX" transform="translate(0 -16)">
+                                            <g id="Group_91" transform="translate(0 16)">
+                                                <path id="Path_116" class="ux-d" d="M343.4,136.9c0-0.8,0-1.5,0-2.3C343.5,60.4,283.1,0,208.8,0S74.2,60.4,74.2,134.6
                 c0,0.8,0,1.5,0,2.3C30.2,159.1,0,204.6,0,257c0,74.2,60.8,134.6,135.4,134.6c26.1,0,51.6-7.6,73.4-21.8
                 c21.8,14.3,47.3,21.9,73.4,21.8c74.7,0,135.4-60.4,135.4-134.6C417.7,204.6,387.5,159.1,343.4,136.9z M208.8,339
                 c-21.5-19.2-34.6-46.1-36.5-74.8c23.9,6.7,49.1,6.7,72.9,0C243.4,292.9,230.3,319.8,208.8,339z M208.8,244.7
@@ -223,30 +228,30 @@
                 c8.6,39.4,34.5,72.9,70.4,91.3c0,0.8,0,1.6,0,2.5c0,36.4,14.7,71.2,40.8,96.5C172.3,362.4,154,367.1,135.4,367.1z M282.3,367.1
                 c-18.6,0-36.8-4.7-53.1-13.7c26.1-25.3,40.9-60.1,40.8-96.5c0-0.8,0-1.6,0-2.5c35.9-18.4,61.7-51.9,70.4-91.3
                 c32.7,19.9,52.8,55.4,52.8,93.8C393.2,317.7,343.4,367.1,282.3,367.1z" />
+                                            </g>
                                         </g>
-                                    </g>
-                                </svg>
+                                    </svg>
+                                </div>
+                                <div class="text-portion">
+                                    <h6>UX Design</h6>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor
+                                        invidunt ut labore et dolore magna aliquyam erat, sed diam </p>
+                                </div>
                             </div>
-                            <div class="text-portion">
-                                <h6>UX Design</h6>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor
-                                    invidunt ut labore et dolore magna aliquyam erat, sed diam </p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
 
-                </div>
-                <div class="col-xl-4">
-                    <a href="" class="service-link">
-                        <div class="card-section">
-                            <div class="icon">
-                                <svg version="1.1" id="UID" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 62 62"
-                                    style="enable-background:new 0 0 62 62;" xml:space="preserve" width="62px">
-                                    <path id="Path_113" d="M38.3,41.9c-0.7,0-1.2,0.5-1.2,1.2c0,0.7,0.5,1.2,1.2,1.2c0.7,0,1.2-0.5,1.2-1.2c0,0,0,0,0,0
+                    </div>
+                    <div class="col-xl-4">
+                        <a href="" class="service-link">
+                            <div class="card-section">
+                                <div class="icon">
+                                    <svg version="1.1" id="UID" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 62 62"
+                                        style="enable-background:new 0 0 62 62;" xml:space="preserve" width="62px">
+                                        <path id="Path_113" d="M38.3,41.9c-0.7,0-1.2,0.5-1.2,1.2c0,0.7,0.5,1.2,1.2,1.2c0.7,0,1.2-0.5,1.2-1.2c0,0,0,0,0,0
         C39.5,42.4,38.9,41.9,38.3,41.9z" />
-                                    <path id="Path_114" d="M55.9,0H6.1C2.7,0,0,2.7,0,6.1v37.1c0,3.3,2.7,6.1,6.1,6.1h18.9v5.6h-1.2c-3.3,0-6.1,2.7-6.1,6.1
+                                        <path id="Path_114" d="M55.9,0H6.1C2.7,0,0,2.7,0,6.1v37.1c0,3.3,2.7,6.1,6.1,6.1h18.9v5.6h-1.2c-3.3,0-6.1,2.7-6.1,6.1
         c0,0.7,0.5,1.2,1.2,1.2c0,0,0,0,0,0h24.2c0.7,0,1.2-0.5,1.2-1.2c0-3.3-2.7-6.1-6.1-6.1h-1.2v-5.6h18.9c3.3,0,6.1-2.7,6.1-6.1V6.1
         C62,2.7,59.3,0,55.9,0z M6.1,2.4h49.9c2,0,3.6,1.6,3.6,3.6v31H54V9.2C54,8.5,53.5,8,52.8,8h-9.7c-0.7,0-1.2,0.5-1.2,1.2v27.9h-6.1
         c0-1.3,0-2.5-0.1-3.7c-0.1-3.2-0.4-6.5-0.9-9.7c2.5-1.8,3.2-5.2,1.7-7.9l-4.2-7.3c-0.3-0.6-1.1-0.8-1.7-0.4
@@ -260,570 +265,586 @@
         H15.3z M10.4,37.1v-17h2.4v17H10.4z M11.2,17.7l2.9-5.8l2.9,5.8H11.2z M41.7,59.6H20.3c0.5-1.5,1.9-2.4,3.4-2.4h14.5
         C39.8,57.2,41.2,58.1,41.7,59.6L41.7,59.6z M34.6,54.7h-7.3v-5.6h7.3L34.6,54.7z M55.9,46.7H6.1c-2,0-3.6-1.6-3.6-3.6v-3.6h57.2v3.6
         C59.6,45.1,58,46.7,55.9,46.7L55.9,46.7z" />
-                                    <path id="Path_115" d="M33.5,41.9h-7.3c-0.7,0-1.2,0.5-1.3,1.2c0,0.7,0.5,1.2,1.2,1.3c0,0,0,0,0.1,0h7.3c0.7,0,1.2-0.5,1.3-1.2
+                                        <path id="Path_115" d="M33.5,41.9h-7.3c-0.7,0-1.2,0.5-1.3,1.2c0,0.7,0.5,1.2,1.2,1.3c0,0,0,0,0.1,0h7.3c0.7,0,1.2-0.5,1.3-1.2
         C34.7,42.5,34.2,41.9,33.5,41.9C33.5,41.9,33.5,41.9,33.5,41.9z" />
-                                </svg>
+                                    </svg>
+                                </div>
+                                <div class="text-portion">
+                                    <h6>UI Design</h6>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor
+                                        invidunt ut labore et dolore magna aliquyam erat, sed diam </p>
+                                </div>
                             </div>
-                            <div class="text-portion">
-                                <h6>UI Design</h6>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor
-                                    invidunt ut labore et dolore magna aliquyam erat, sed diam </p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
 
-                </div>
-                <div class="col-xl-4">
-                    <a href="" class="service-link">
-                        <div class="card-section">
-                            <div class="icon">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 63 63"
-                                    style="enable-background:new 0 0 63 63;" xml:space="preserve" width="62px">
-                                    <style type="text/css">
-                                        .html-d {
-                                            stroke: #FFFFFF;
-                                        }
-                                    </style>
-                                    <g id="HTML" transform="translate(0.5 0.5)">
-                                        <g id="Group_78">
-                                            <g id="Group_77">
-                                                <path id="Path_106" class="html-d" d="M56.6,0H5.4C2.4,0,0,2.4,0,5.4v51.1c0,3,2.4,5.4,5.4,5.5h51.1c3,0,5.4-2.4,5.5-5.4V5.4
+                    </div>
+                    <div class="col-xl-4">
+                        <a href="" class="service-link">
+                            <div class="card-section">
+                                <div class="icon">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 63 63"
+                                        style="enable-background:new 0 0 63 63;" xml:space="preserve" width="62px">
+                                        <style type="text/css">
+                                            .html-d {
+                                                stroke: #FFFFFF;
+                                            }
+                                        </style>
+                                        <g id="HTML" transform="translate(0.5 0.5)">
+                                            <g id="Group_78">
+                                                <g id="Group_77">
+                                                    <path id="Path_106" class="html-d" d="M56.6,0H5.4C2.4,0,0,2.4,0,5.4v51.1c0,3,2.4,5.4,5.4,5.5h51.1c3,0,5.4-2.4,5.5-5.4V5.4
                     C62,2.4,59.6,0,56.6,0z M58.4,56.6c0,1-0.8,1.8-1.8,1.8H5.4c-1,0-1.8-0.8-1.8-1.8V18.2h54.7L58.4,56.6z M58.4,14.5H3.6V5.4
                     c0-1,0.8-1.8,1.8-1.8h51.1c1,0,1.8,0.8,1.8,1.8L58.4,14.5z" />
-                                            </g>
-                                        </g>
-                                        <g id="Group_80" transform="translate(11.005 29.108)">
-                                            <g id="Group_79">
-                                                <path id="Path_107" class="html-d"
-                                                    d="M4.4,9.1l6-6c0.7-0.7,0.7-1.9,0-2.6c-0.7-0.7-1.9-0.7-2.6,0c0,0,0,0,0,0L0.5,7.8
-                    c-0.7,0.7-0.7,1.9,0,2.6l7.3,7.3c0.7,0.7,1.9,0.7,2.6,0c0.7-0.7,0.7-1.9,0-2.6c0,0,0,0,0,0L4.4,9.1z" />
-                                            </g>
-                                        </g>
-                                        <g id="Group_82" transform="translate(40.029 29.108)">
-                                            <g id="Group_81">
-                                                <path id="Path_108" class="html-d" d="M10.4,7.8L3.1,0.5c-0.7-0.7-1.9-0.7-2.6,0c-0.7,0.7-0.7,1.8,0,2.6l6,6l-6,6
-                    c-0.7,0.7-0.7,1.9,0,2.6c0.7,0.7,1.8,0.7,2.6,0l7.3-7.3C11.1,9.7,11.1,8.6,10.4,7.8z" />
-                                            </g>
-                                        </g>
-                                        <g id="Group_84" transform="translate(25.516 25.44)">
-                                            <g id="Group_83">
-                                                <path id="Path_109" class="html-d" d="M9.7,0.1c-1-0.3-2,0.2-2.3,1.2c0,0,0,0,0,0L0.1,23.2c-0.3,1,0.2,2,1.1,2.3
-                    c1,0.3,2-0.2,2.3-1.1c0,0,0,0,0-0.1l7.3-21.9C11.2,1.4,10.7,0.4,9.7,0.1z" />
-                                            </g>
-                                        </g>
-                                        <g id="Group_86" transform="translate(7.433 7.311)">
-                                            <g id="Group_85">
-                                                <path id="Path_110" class="html-d" d="M5.5,0H1.8C0.8,0,0,0.9,0,1.9c0,1,0.8,1.8,1.8,1.8h3.7c1,0,1.8-0.9,1.8-1.9
-                    C7.2,0.8,6.5,0,5.5,0z" />
-                                            </g>
-                                        </g>
-                                        <g id="Group_88" transform="translate(18.27 7.311)">
-                                            <g id="Group_87">
-                                                <path id="Path_111" class="html-d" d="M5.5,0H1.8C0.8,0,0,0.8,0,1.8c0,1,0.8,1.8,1.8,1.9c0,0,0.1,0,0.1,0h3.7c1,0,1.8-0.8,1.9-1.8
-                    C7.4,0.9,6.6,0,5.5,0C5.5,0,5.5,0,5.5,0z" />
-                                            </g>
-                                        </g>
-                                        <g id="Group_90" transform="translate(29.16 7.311)">
-                                            <g id="Group_89">
-                                                <path id="Path_112" class="html-d" d="M5.5,0H1.8C0.8,0,0,0.8,0,1.8c0,1,0.8,1.8,1.8,1.9c0,0,0.1,0,0.1,0h3.7c1,0,1.8-0.9,1.8-1.9
-                    C7.2,0.8,6.5,0,5.5,0z" />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="text-portion">
-                                <h6>HTML Development</h6>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                    tempor
-                                    invidunt ut labore et dolore magna aliquyam erat, sed diam </p>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- -------------------------------------------------------------------Manifesto----------------------------------------------------------------->
-    <section class="manifesto">
-        <div class="container">
-            <h2>My Manifesto</h2>
-            <div class="scroll-counter">
-                <div class="row">
-                    <div class="col-xl-4">
-                        <div class="counter-txt">
-                            <h3>01</h3>
-                            <span>/</span>
-                            <h3 class="fade">08</h3>
-                        </div>
-                    </div>
-                    <div class="col-xl-8">
-                        <div class="scroll-text">
-                            <ul>
-                                <li>I listen closely, think deeply, and speak openly - most of the time in that order.
-                                </li>
-                                <li>The more complex a challenge, the simpler a solution it demands.</li>
-                                <li>Love the work, respect the people.</li>
-                                <li>I’m not afraid of making mistakes; I’m afraid of not taking chances.</li>
-                                <li>I care what users want</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ----------------------------------------------------------------Full Screen Text Banner------------------------------------------------------>
-    <section class="text-banner">
-        <div class="container">
-            <div class="content">
-                <h6>I shape the way to interact with the digital world.</h6>
-                <p>User interface (UI) developers combine programming, psychology and creative design to craft intuitive
-                    controls for software. My mission is to create an interface that behaves as users would it expect it
-                    to,
-                    facilitating a seamless and efficient user experience. </p>
-            </div>
-        </div>
-    </section>
-    <!-- -----------------------------------------------------------------------My Process-------------------------------------------------------------->
-    <section class="process">
-        <div class="row">
-            <div class="col-lg-9">
-                <div class="left-panel">
-                    <div class="content">
-                        <h2>My Process</h2>
-                        <a href="">
-                            <div class="flex-container">
-                                <div class="icon">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                                        style="enable-background:new 0 0 25 12;" xml:space="preserve">
-                                        <style type="text/css">
-                                            .arrow-link {
-                                                fill: #fff;
-                                            }
-                                        </style>
-                                        <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                            <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                            <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                            <path id="Path_101" class="arrow-link"
-                                                d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <p>Discover</p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="flex-container">
-                                <div class="icon">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                                        style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
-                                        <style type="text/css">
-                                            .arrow-link {
-                                                fill: #fff;
-                                            }
-                                        </style>
-                                        <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                            <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                            <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                            <path id="Path_101" class="arrow-link"
-                                                d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <p>Define</p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="flex-container">
-                                <div class="icon">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                                        style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
-                                        <style type="text/css">
-                                            .arrow-link {
-                                                fill: #fff;
-                                            }
-                                        </style>
-                                        <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                            <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                            <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                            <path id="Path_101" class="arrow-link"
-                                                d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <p>Ideate</p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="flex-container">
-                                <div class="icon">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                                        style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
-                                        <style type="text/css">
-                                            .arrow-link {
-                                                fill: #fff;
-                                            }
-                                        </style>
-                                        <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                            <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                            <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                            <path id="Path_101" class="arrow-link"
-                                                d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <p>Design</p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="flex-container">
-                                <div class="icon">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                                        style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
-                                        <style type="text/css">
-                                            .arrow-link {
-                                                fill: #fff;
-                                            }
-                                        </style>
-                                        <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                            <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                            <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                            <path id="Path_101" class="arrow-link"
-                                                d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <p>Coding</p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="flex-container">
-                                <div class="icon">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                                        style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
-                                        <style type="text/css">
-                                            .arrow-link {
-                                                fill: #fff;
-                                            }
-                                        </style>
-                                        <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                            <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                            <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                            <path id="Path_101" class="arrow-link"
-                                                d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <p>Testing</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="right-panel">
-                    <div class="position-div">
-                        <div class="img-container">
-                            <img class="img-respornsive" src="images/me.png" alt="me-image">
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- -----------------------------------------------------------------------Domains-------------------------------------------------------------->
-    <section class="domains">
-        <div class="horizondal-ul">
-            <div>
-                <ul>
-                    <li>Health Care</li>
-                    <li>Media & Entertainment</li>
-                    <li>Fitness</li>
-                    <li>Information Technology</li>
-                    <li>Finance</li>
-                    <li>Construction</li>
-                    <li>Automotive</li>
-                    <li>Travel</li>
-                    <li>Charity</li>
-                    <li>Photography</li>
-                    <li>Food</li>
-                    <li>Pet Care</li>
-                    <li>Adventure</li>
-                    <li>Utility Software</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- -----------------------------------------------------------------------Works-------------------------------------------------------------->
-    <section class="works">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-3">
-                    <h2>My Works</h2>
-                    <p>Focused on<br>
-                        functionality,<br>
-                        fueled by<br>
-                        connection,<br>
-                        designed with<br>
-                        purpose.</p>
-                    <a href="" class="link-common">
-                        View more Projects
-                        <span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                                style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
-                                <style type="text/css">
-                                    .link-common-arrow {
-                                        fill: #fff;
-                                    }
-                                </style>
-                                <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                    <path id="Path_99" class="link-common-arrow" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-    c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                    <path id="Path_100" class="link-common-arrow" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-    c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                    <path id="Path_101" class="link-common-arrow"
-                                        d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                                </g>
-                            </svg></span>
-                    </a>
-                </div>
-                <div class="col-xl-9">
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- -----------------------------------------------------------------------Clients-------------------------------------------------------------->
-    <section class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9">
-
-                </div>
-                <div class="col-xl-3">
-                    <div class="content">
-                        <h2>Clients</h2>
-                        <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr,sed diam nonumy eirmod
-                            tempor
-                            invidunt ut labore et dolore magna aliquyam erat, </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- -----------------------------------------------------------------------Testimonials-------------------------------------------------------------->
-    <section class="testimonials">
-        <div class="row">
-            <div class="col-xl-2">
-            </div>
-            <div class="col-xl-10">
-                <div class="ui-panel bg-black">
-                    <div class="quote">
-                        <img src="images/svg/quote.svg" alt="quote">
-                    </div>
-                    <div class="main-content">
-                        <p>Akhil is so skilled and dedicated to his work. He have a good eye in design and trends. He is
-                            fast learner and problem solver.<br> I recommend Akhil to any frontend design and
-                            development
-                            position.</p>
-                        <div class="auther-info">
-                            <h6 class="auther-name">Girish Krishnan G</h6>
-                            <p class="auther-designation">Customer Experience Design<br>
-                                Etisalat</p>
-                        </div>
-                    </div>
-                    <div class="navigation">
-                        <div class="left-div">
-                            <a href="" class="link-common">
-                                <span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                                        style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
-                                        <style type="text/css">
-                                            .link-common-arrow {
-                                                fill: #fff;
-                                            }
-                                        </style>
-                                        <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                            <path id="Path_99" class="link-common-arrow" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-            c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                            <path id="Path_100" class="link-common-arrow" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-            c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                            <path id="Path_101" class="link-common-arrow"
-                                                d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                                        </g>
-                                    </svg></span>
-                                Prev
-
-                            </a>
-                        </div>
-                        <div class="right-div">
-                            <a href="" class="link-common">
-                                Next
-                                <span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                                        style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
-                                        <style type="text/css">
-                                            .link-common-arrow {
-                                                fill: #fff;
-                                            }
-                                        </style>
-                                        <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                            <path id="Path_99" class="link-common-arrow" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                            <path id="Path_100" class="link-common-arrow" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                            <path id="Path_101" class="link-common-arrow"
-                                                d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                                        </g>
-                                    </svg></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- -----------------------------------------------------------------------Footer-------------------------------------------------------------->
-    <section class="footer">
-        <div class="container">
-            <h3>Starting a new project or<br>
-                want to collaborate with us?</h3>
-            <a href="" class="link-common">
-                Let's Talk
-                <span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
-                        style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
-                        <style type="text/css">
-                            .link-common-arrow {
-                                fill: #fff;
-                            }
-                        </style>
-                        <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                            <path id="Path_99" class="link-common-arrow" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-    c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                            <path id="Path_100" class="link-common-arrow" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-    c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                            <path id="Path_101" class="link-common-arrow"
-                                d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
-                        </g>
-                    </svg></span>
-            </a>
-            <div class="row">
-                <div class="col-xl-5">
-                    <div class="contact-section mgn-top-50">
-                        <span>Locate Us</span>
-                        <p>Kochi, Kerala, India</p>
-                    </div>
-                    <div class="contact-section mgn-tb-50">
-                        <span>Speak to Us</span>
-                        <a href="">+91 954 224 492</a>
-                    </div>
-                    <div class="contact-section">
-                        <span>Let's work together</span>
-                        <a href="">hello@akhilgopi.com</a>
-                    </div>
-                </div>
-                <div class="col-xl-7">
-                    <div class="form-secton">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Your Name">
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Enter your email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="mb-3 mgn-top-50">
-                                    <label class="form-label">Your Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                        placeholder="Type Something"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="submit-btn">
-                                    <a href="" class="link-common">
-                                        Submit
-                                        <span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                viewBox="0 0 25 12" style="enable-background:new 0 0 25 12;"
-                                                xml:space="preserve" width="12px">
-                                                <style type="text/css">
-                                                    .link-common-arrow {
-                                                        fill: #fff;
-                                                    }
-                                                </style>
-                                                <g id="Group_35" transform="translate(28 -6) rotate(90)">
-                                                    <path id="Path_99" class="link-common-arrow" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
-                            c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
-                                                    <path id="Path_100" class="link-common-arrow" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
-                            c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
-                                                    <path id="Path_101" class="link-common-arrow"
-                                                        d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
                                                 </g>
-                                            </svg></span>
-                                    </a>
+                                            </g>
+                                            <g id="Group_80" transform="translate(11.005 29.108)">
+                                                <g id="Group_79">
+                                                    <path id="Path_107" class="html-d"
+                                                        d="M4.4,9.1l6-6c0.7-0.7,0.7-1.9,0-2.6c-0.7-0.7-1.9-0.7-2.6,0c0,0,0,0,0,0L0.5,7.8
+                    c-0.7,0.7-0.7,1.9,0,2.6l7.3,7.3c0.7,0.7,1.9,0.7,2.6,0c0.7-0.7,0.7-1.9,0-2.6c0,0,0,0,0,0L4.4,9.1z" />
+                                                </g>
+                                            </g>
+                                            <g id="Group_82" transform="translate(40.029 29.108)">
+                                                <g id="Group_81">
+                                                    <path id="Path_108" class="html-d" d="M10.4,7.8L3.1,0.5c-0.7-0.7-1.9-0.7-2.6,0c-0.7,0.7-0.7,1.8,0,2.6l6,6l-6,6
+                    c-0.7,0.7-0.7,1.9,0,2.6c0.7,0.7,1.8,0.7,2.6,0l7.3-7.3C11.1,9.7,11.1,8.6,10.4,7.8z" />
+                                                </g>
+                                            </g>
+                                            <g id="Group_84" transform="translate(25.516 25.44)">
+                                                <g id="Group_83">
+                                                    <path id="Path_109" class="html-d" d="M9.7,0.1c-1-0.3-2,0.2-2.3,1.2c0,0,0,0,0,0L0.1,23.2c-0.3,1,0.2,2,1.1,2.3
+                    c1,0.3,2-0.2,2.3-1.1c0,0,0,0,0-0.1l7.3-21.9C11.2,1.4,10.7,0.4,9.7,0.1z" />
+                                                </g>
+                                            </g>
+                                            <g id="Group_86" transform="translate(7.433 7.311)">
+                                                <g id="Group_85">
+                                                    <path id="Path_110" class="html-d" d="M5.5,0H1.8C0.8,0,0,0.9,0,1.9c0,1,0.8,1.8,1.8,1.8h3.7c1,0,1.8-0.9,1.8-1.9
+                    C7.2,0.8,6.5,0,5.5,0z" />
+                                                </g>
+                                            </g>
+                                            <g id="Group_88" transform="translate(18.27 7.311)">
+                                                <g id="Group_87">
+                                                    <path id="Path_111" class="html-d" d="M5.5,0H1.8C0.8,0,0,0.8,0,1.8c0,1,0.8,1.8,1.8,1.9c0,0,0.1,0,0.1,0h3.7c1,0,1.8-0.8,1.9-1.8
+                    C7.4,0.9,6.6,0,5.5,0C5.5,0,5.5,0,5.5,0z" />
+                                                </g>
+                                            </g>
+                                            <g id="Group_90" transform="translate(29.16 7.311)">
+                                                <g id="Group_89">
+                                                    <path id="Path_112" class="html-d" d="M5.5,0H1.8C0.8,0,0,0.8,0,1.8c0,1,0.8,1.8,1.8,1.9c0,0,0.1,0,0.1,0h3.7c1,0,1.8-0.9,1.8-1.9
+                    C7.2,0.8,6.5,0,5.5,0z" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
                                 </div>
+                                <div class="text-portion">
+                                    <h6>HTML Development</h6>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor
+                                        invidunt ut labore et dolore magna aliquyam erat, sed diam </p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------------------------------------------------------Manifesto----------------------------------------------------------------->
+        <section class="manifesto">
+            <div class="container">
+                <h2>My Manifesto</h2>
+                <div class="scroll-counter">
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="counter-txt">
+                                <h3>01</h3>
+                                <span>/</span>
+                                <h3 class="fade">08</h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-8">
+                            <div class="scroll-text">
+                                <ul>
+                                    <li>I listen closely, think deeply, and speak openly - most of the time in that
+                                        order.
+                                    </li>
+                                    <li>The more complex a challenge, the simpler a solution it demands.</li>
+                                    <li>Love the work, respect the people.</li>
+                                    <li>I’m not afraid of making mistakes; I’m afraid of not taking chances.</li>
+                                    <li>I care what users want</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <p>Copyright 2021 © <a href="">Akhilgopi </a> .All Rights Reserved.</p>
+        </section>
+        <!-- ----------------------------------------------------------------Full Screen Text Banner------------------------------------------------------>
+        <section class="text-banner">
+            <div class="container">
+                <div class="content">
+                    <h6>I shape the way to interact with the digital world.</h6>
+                    <p>User interface (UI) developers combine programming, psychology and creative design to craft
+                        intuitive
+                        controls for software. My mission is to create an interface that behaves as users would it
+                        expect it
+                        to,
+                        facilitating a seamless and efficient user experience. </p>
+                </div>
+            </div>
+        </section>
+        <!-- -----------------------------------------------------------------------My Process-------------------------------------------------------------->
+        <section class="process">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="left-panel">
+                        <div class="content">
+                            <h2>My Process</h2>
+                            <a href="">
+                                <div class="flex-container">
+                                    <div class="icon">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 25 12" style="enable-background:new 0 0 25 12;"
+                                            xml:space="preserve">
+                                            <style type="text/css">
+                                                .arrow-link {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                            <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                                <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                                <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                                <path id="Path_101" class="arrow-link"
+                                                    d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <p>Discover</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="flex-container">
+                                    <div class="icon">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 25 12" style="enable-background:new 0 0 25 12;"
+                                            xml:space="preserve" width="12px">
+                                            <style type="text/css">
+                                                .arrow-link {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                            <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                                <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                                <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                                <path id="Path_101" class="arrow-link"
+                                                    d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <p>Define</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="flex-container">
+                                    <div class="icon">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 25 12" style="enable-background:new 0 0 25 12;"
+                                            xml:space="preserve" width="12px">
+                                            <style type="text/css">
+                                                .arrow-link {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                            <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                                <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                                <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                                <path id="Path_101" class="arrow-link"
+                                                    d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <p>Ideate</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="flex-container">
+                                    <div class="icon">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 25 12" style="enable-background:new 0 0 25 12;"
+                                            xml:space="preserve" width="12px">
+                                            <style type="text/css">
+                                                .arrow-link {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                            <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                                <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                                <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                                <path id="Path_101" class="arrow-link"
+                                                    d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <p>Design</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="flex-container">
+                                    <div class="icon">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 25 12" style="enable-background:new 0 0 25 12;"
+                                            xml:space="preserve" width="12px">
+                                            <style type="text/css">
+                                                .arrow-link {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                            <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                                <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                                <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                                <path id="Path_101" class="arrow-link"
+                                                    d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <p>Coding</p>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class=" flex-container">
+                                    <div class="icon">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 25 12" style="enable-background:new 0 0 25 12;"
+                                            xml:space="preserve" width="12px">
+                                            <style type="text/css">
+                                                .arrow-link {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                            <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                                <path id="Path_99" class="arrow-link" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                                <path id="Path_100" class="arrow-link" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                                <path id="Path_101" class="arrow-link"
+                                                    d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <p>Testing</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-xl-6">
-                        <div class="social-links">
-                            <a href="">LinkedIn</a>
-                            <a href="" class="mgn-lr-50">Behance</a>
-                            <a href="">Instagram</a>
+                </div>
+                <div class="col-lg-3">
+                    <div class="right-panel">
+                        <div class="position-div">
+                            <div class="img-container">
+                                <img class="img-respornsive" src="images/me.png" alt="me-image">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- -----------------------------------------------------------------------Domains-------------------------------------------------------------->
+        <section class="domains">
+            <div class="horizondal-ul">
+                <div>
+                    <ul>
+                        <li>Health Care</li>
+                        <li>Media & Entertainment</li>
+                        <li>Fitness</li>
+                        <li>Information Technology</li>
+                        <li>Finance</li>
+                        <li>Construction</li>
+                        <li>Automotive</li>
+                        <li>Travel</li>
+                        <li>Charity</li>
+                        <li>Photography</li>
+                        <li>Food</li>
+                        <li>Pet Care</li>
+                        <li>Adventure</li>
+                        <li>Utility Software</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- -----------------------------------------------------------------------Works-------------------------------------------------------------->
+        <section class="works">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <h2>My Works</h2>
+                        <p>Focused on<br>
+                            functionality,<br>
+                            fueled by<br>
+                            connection,<br>
+                            designed with<br>
+                            purpose.</p>
+                        <a href="" class="link-common">
+                            View more Projects
+                            <span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
+                                    style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
+                                    <style type="text/css">
+                                        .link-common-arrow {
+                                            fill: #fff;
+                                        }
+                                    </style>
+                                    <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                        <path id="Path_99" class="link-common-arrow" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+    c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                        <path id="Path_100" class="link-common-arrow" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+    c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                        <path id="Path_101" class="link-common-arrow"
+                                            d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                    </g>
+                                </svg></span>
+                        </a>
+                    </div>
+                    <div class="col-xl-9">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -----------------------------------------------------------------------Clients-------------------------------------------------------------->
+        <section class="clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9">
+
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="content">
+                            <h2>Clients</h2>
+                            <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr,sed diam nonumy eirmod
+                                tempor
+                                invidunt ut labore et dolore magna aliquyam erat, </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- -----------------------------------------------------------------------Testimonials-------------------------------------------------------------->
+        <section class="testimonials">
+            <div class="row">
+                <div class="col-xl-2">
+                </div>
+                <div class="col-xl-10">
+                    <div class="ui-panel bg-black">
+                        <div class="quote">
+                            <img src="images/svg/quote.svg" alt="quote">
+                        </div>
+                        <div class="main-content">
+                            <p>Akhil is so skilled and dedicated to his work. He have a good eye in design and trends.
+                                He is
+                                fast learner and problem solver.<br> I recommend Akhil to any frontend design and
+                                development
+                                position.</p>
+                            <div class="auther-info">
+                                <h6 class="auther-name">Girish Krishnan G</h6>
+                                <p class="auther-designation">Customer Experience Design<br>
+                                    Etisalat</p>
+                            </div>
+                        </div>
+                        <div class="navigation">
+                            <div class="left-div">
+                                <a href="" class="link-common">
+                                    <span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 25 12" style="enable-background:new 0 0 25 12;"
+                                            xml:space="preserve" width="12px">
+                                            <style type="text/css">
+                                                .link-common-arrow {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                            <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                                <path id="Path_99" class="link-common-arrow" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+            c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                                <path id="Path_100" class="link-common-arrow" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+            c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                                <path id="Path_101" class="link-common-arrow"
+                                                    d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                            </g>
+                                        </svg></span>
+                                    Prev
 
-    </section>
+                                </a>
+                            </div>
+                            <div class="right-div">
+                                <a href="" class="link-common">
+                                    Next
+                                    <span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 25 12" style="enable-background:new 0 0 25 12;"
+                                            xml:space="preserve" width="12px">
+                                            <style type="text/css">
+                                                .link-common-arrow {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                            <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                                <path id="Path_99" class="link-common-arrow" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+                c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                                <path id="Path_100" class="link-common-arrow" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+                c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                                <path id="Path_101" class="link-common-arrow"
+                                                    d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                            </g>
+                                        </svg></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- -----------------------------------------------------------------------Footer-------------------------------------------------------------->
+        <section class="footer">
+            <div class="container">
+                <h3>Starting a new project or<br>
+                    want to collaborate with us?</h3>
+                <a href="" class="link-common">
+                    Let's Talk
+                    <span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 12"
+                            style="enable-background:new 0 0 25 12;" xml:space="preserve" width="12px">
+                            <style type="text/css">
+                                .link-common-arrow {
+                                    fill: #fff;
+                                }
+                            </style>
+                            <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                <path id="Path_99" class="link-common-arrow" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+    c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                <path id="Path_100" class="link-common-arrow" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+    c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                <path id="Path_101" class="link-common-arrow"
+                                    d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                            </g>
+                        </svg></span>
+                </a>
+                <div class="row">
+                    <div class="col-xl-5">
+                        <div class="contact-section mgn-top-50">
+                            <span>Locate Us</span>
+                            <p>Kochi, Kerala, India</p>
+                        </div>
+                        <div class="contact-section mgn-tb-50">
+                            <span>Speak to Us</span>
+                            <a href="">+91 954 224 492</a>
+                        </div>
+                        <div class="contact-section">
+                            <span>Let's work together</span>
+                            <a href="">hello@akhilgopi.com</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7">
+                        <div class="form-secton">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="Enter your email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="mb-3 mgn-top-50">
+                                        <label class="form-label">Your Message</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                            placeholder="Type Something"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="submit-btn">
+                                        <a href="" class="link-common">
+                                            Submit
+                                            <span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    viewBox="0 0 25 12" style="enable-background:new 0 0 25 12;"
+                                                    xml:space="preserve" width="12px">
+                                                    <style type="text/css">
+                                                        .link-common-arrow {
+                                                            fill: #fff;
+                                                        }
+                                                    </style>
+                                                    <g id="Group_35" transform="translate(28 -6) rotate(90)">
+                                                        <path id="Path_99" class="link-common-arrow" d="M17,10c-0.3,0-0.5-0.1-0.7-0.3l-5-5c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5,5
+                            c0.4,0.4,0.4,1,0,1.4c0,0,0,0,0,0C17.5,9.9,17.3,10,17,10z" />
+                                                        <path id="Path_100" class="link-common-arrow" d="M7,10c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4c0,0,0,0,0,0l5-5c0.4-0.4,1-0.4,1.4,0
+                            c0.4,0.4,0.4,1,0,1.4l-5,5C7.5,9.9,7.3,10,7,10z" />
+                                                        <path id="Path_101" class="link-common-arrow"
+                                                            d="M12,28c-0.6,0-1-0.6-1-1.4V4.4C11,3.6,11.4,3,12,3s1,0.6,1,1.4v22.2C13,27.4,12.6,28,12,28z" />
+                                                    </g>
+                                                </svg></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <p>Copyright 2021 © <a href="" class="a-animate">Akhilgopi </a> .All Rights Reserved.</p>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="social-links">
+                                <a href="">LinkedIn</a>
+                                <a href="" class="mgn-lr-50">Behance</a>
+                                <a href="">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
     <!-- -----------------------------------------------------------------------External JS------------------------------------------------------------>
-    <script src="js/navbar.js"></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
@@ -833,7 +854,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="js/moveToTop.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 
 </html>

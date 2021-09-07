@@ -1,2 +1,40 @@
 @import "variables";
 @import "mixins";
+:root {
+    --text-color: #111;
+    --bg-color: #b9b3a9;
+}
+
+body {
+    transition: 0.3s ease-out;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    overscroll-behavior: none;
+}
+
+section:not(#sectionPin) {
+    width: 100%;
+    position: relative;
+}
+
+#sectionPin {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 10vw;
+}
+.pin-wrap > * {
+    min-width: 60vw;
+    padding: 0 5vw;
+}

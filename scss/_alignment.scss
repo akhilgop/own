@@ -143,6 +143,24 @@
 .mgn-rgt-105 {
     margin-right: 150px;
 }
+.mgn-10 {
+    margin: 10px;
+}
+.mgn-20 {
+    margin: 20px;
+}
+.mgn-30 {
+    margin: 30px;
+}
+.mgn-40 {
+    margin: 40px;
+}
+.mgn-50 {
+    margin: 50px;
+}
+.mgn-tb-50 {
+    margin: 50px 0;
+}
 // ----------------------------------------------------------------Padding----------------------------------------------------------------------------
 .pdng-top-5 {
     padding-top: 5px;
@@ -291,11 +309,20 @@
 .align-cntr {
     @include align-cntr;
 }
-.mgn-tb-50 {
-    margin: 50px 0;
+.pad-10 {
+    padding: 10px;
 }
-.mgn-lr-50 {
-    margin: 0 50px;
+.pad-20 {
+    padding: 20px;
+}
+.pad-30 {
+    padding: 30px;
+}
+.pad-40 {
+    padding: 40px;
+}
+.pad-50 {
+    padding: 50px;
 }
 // ----------------------------------------------------------------Height----------------------------------------------------------------------------
 .h-100 {
@@ -322,7 +349,7 @@
 
 // ----------------------------------------------------------------Flex----------------------------------------------------------------------------
 .flex-center {
-    @include flex-cntr;
+    @include flex-hv-cntr;
 }
 
 .flex-container {
@@ -337,14 +364,13 @@
     display: flex;
     justify-content: center;
 }
-// ----------------------------------------------------------------Image Container----------------------------------------------------------------------------
-.img-container {
-    img {
-        width: 100%;
+// --------------------------------------------------------------Rows with No side Pad-------------------------------------------------------------//
+.row.no-mp {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    div {
+        @extend .row.no-mp;
     }
-}
-.bg-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }

@@ -3,9 +3,9 @@
 @import "mixins";
 @import "responsive";
 @import "variables";
-@import "landingPage";
+@import "pages/landingpage";
 @import "alignment";
-@import "common";
+@import "common-classes";
 // ----------------------------------------------------Common Classes-----------------------------------------------------//
 html {
     scroll-behavior: smooth;
@@ -20,7 +20,7 @@ body {
 }
 
 .flex-center {
-    @include flex-cntr;
+    @include flex-hv-cntr;
 }
 
 .align-cntr {
