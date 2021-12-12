@@ -45,29 +45,63 @@ p {
     line-height: calc(#{$p} * 2);
     color: $body-color;
 }
-
-.nav-item {
-    .nav-link {
-        @include a-animate;
-    }
-    .nav-link.dropdown-toggle {
-        &:after {
-            background: inherit !important;
-            position: relative !important;
-            display: inherit !important;
-            height: auto;
-            left: inherit;
-            position: relative !important;
-        }
-        &:hover:after {
-            width: inherit;
-            left: inherit;
-        }
-    }
+a {
+    text-decoration: none !important;
 }
 
 .a-animate {
     @include a-animate;
+}
+.bg-primary {
+    .a-animate {
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        color: $white !important;
+        &:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 0;
+            position: absolute;
+            background: $white !important;
+            -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+    }
+}
+.a-animate-white {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    color: $white !important;
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        background: $white;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    &:hover:after {
+        width: 100%;
+        left: 0;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        outline: 0;
+        text-decoration: none;
+        color: $white;
+    }
 }
 a {
     font-size: $p;
@@ -182,6 +216,18 @@ button {
 }
 .btn-outline-tertiary-animate {
     @include btn-animate($white, $tertiary, $secondary);
+}
+.btn-circle {
+    @include round(50px);
+}
+.outline-white {
+    @include outline-circle($white);
+}
+.outline-primary {
+    @include outline-circle($primary);
+}
+.outline-secondary {
+    @include outline-circle($secondary);
 }
 // ----------------------------------------------------Form Control-----------------------------------------------------//
 
@@ -557,4 +603,139 @@ input[type="range"]::-ms-fill-lower {
     height: var(--trackSize);
     background-color: var(--progressBg);
     border-radius: calc(var(--trackSize) / 2) 0 0 calc(var(--trackSize) / 2);
+}
+// --------------------------------------------------------------------Combo Box-----------------------------------------------------------------//
+.combo-box {
+    margin-bottom: 50px;
+    .c-label {
+        font-size: 24px !important;
+        font-weight: 300 !important;
+        margin-bottom: 5px !important;
+    }
+    .c-content {
+        font-size: 30px !important;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+// --------------------------------------------------------------------Circle On Hover-----------------------------------------------------------------//
+.circle-on-hover {
+    position: relative;
+    transition: 0.5s all ease-out;
+    &:hover {
+        @include circle(100px, $primary);
+        position: absolute;
+        top: -50px;
+        @include text(24px, 24px, 300, $white);
+        flex-wrap: wrap;
+        word-break: break-word;
+        text-align: center;
+        transition: 0.5s all ease-out;
+    }
+}
+// --------------------------------------------------------------------Arrow UL-----------------------------------------------------------------//
+.arrow-ul {
+    list-style-image: url("../images/svg/ul_arrow.svg");
+    li {
+        font-size: 24px;
+        line-height: 40px;
+        font-weight: 300;
+        font-family: $akkurat;
+        padding-left: 1rem;
+    }
+}
+
+.link-border-100 {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: right;
+    a {
+        font-size: 30px;
+        color: $white;
+        text-decoration: none;
+        justify-content: right;
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+    span {
+        margin-left: 10px;
+    }
+    .underline-div {
+        width: 100%;
+        height: 1px;
+        background-color: $gray3;
+        margin-top: 25px;
+    }
+}
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    i {
+        @include circle(70px, $trans);
+        position: relative;
+        @include text(24px, 24px, 300, $white);
+        flex-wrap: wrap;
+        transition: 0.5s all ease-out;
+        z-index: 1;
+    }
+    &:hover {
+        color: $white;
+        i {
+            background-color: $primary !important;
+        }
+    }
+}
+.link-arrow-primary {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    color: $primary !important;
+    i {
+        @include circle(70px, $trans);
+        position: relative;
+        @include text(24px, 24px, 300, $primary);
+        flex-wrap: wrap;
+        transition: 0.5s all ease-out;
+        z-index: 1;
+    }
+    &:hover {
+        i {
+            &::before {
+                color: $white;
+            }
+            background-color: $primary !important;
+        }
+    }
+}
+.link-arrow-dark {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    color: $secondary !important;
+    i {
+        @include circle(70px, $trans);
+        position: relative;
+        @include text(24px, 24px, 300, $secondary);
+        flex-wrap: wrap;
+        transition: 0.5s all ease-out;
+        z-index: 1;
+    }
+    &:hover {
+        i {
+            &::before {
+                color: $white;
+            }
+            background-color: $primary !important;
+        }
+    }
 }

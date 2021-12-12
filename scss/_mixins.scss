@@ -119,6 +119,18 @@
     background-color: $bg;
     @include flex-hv-cntr;
 }
+@mixin round($unit) {
+    width: $unit;
+    height: $unit;
+    border-radius: $unit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin outline-circle($color) {
+    color: $color;
+    border: 1px solid $color;
+}
 @mixin circle-image($unit) {
     width: $unit;
     height: $unit;

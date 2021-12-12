@@ -20,12 +20,28 @@
     display: flex;
     align-items: center;
     position: relative;
+    &:hover {
+        .banner-hover-btn {
+            display: flex !important;
+            transition: all 1s ease-out;
+        }
+    }
     h1 {
         font-size: 150px;
         line-height: 200px;
         span {
             font-family: $ivymode;
         }
+    }
+    .banner-hover-btn {
+        display: none !important;
+        @include circle(130px, $primary);
+        text-decoration: none;
+        @include text(16px, 30px, 400, $white);
+        position: absolute;
+        right: 100px;
+        top: 50%;
+        transition: all 1s ease-out;
     }
 }
 // ------------------------------------------------------------About-------------------------------------------//
@@ -60,13 +76,20 @@
             border: 1px solid $trans;
             background-color: $white;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            i {
+                z-index: 222;
+                position: relative;
+                font-size: 30px !important;
+                color: $secondary;
+            }
             &:hover,
             &:active,
             &:focus {
                 background-color: $primary;
                 border: 1px solid $trans;
-                svg {
-                    fill: $white;
+                i {
+                    color: $white;
                 }
             }
         }
@@ -173,58 +196,57 @@
 // ------------------------------------------------------------Services-------------------------------------------//
 .services {
     padding: 150px 0;
-    .service-link {
-        text-decoration: none;
-        display: flex;
-        height: 100%;
+}
+.service-link {
+    text-decoration: none;
+    display: flex;
+    height: 100%;
+    transition: all 1s ease-out;
+    .card-section {
+        transition: all 0.5s ease-out;
+    }
+    p,
+    h6 {
         transition: all 1s ease-out;
-        .card-section {
-            transition: all 0.5s ease-out;
-        }
+    }
+    .text-portion {
+        transition: all 1s ease-in-out;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        transition: all 1s ease-out;
+        outline: 0;
         p,
         h6 {
+            color: $white;
+            position: relative;
+            z-index: 1;
             transition: all 1s ease-out;
         }
-        .text-portion {
+        .card-section {
+            position: relative;
+            background-color: $primary;
             transition: all 1s ease-in-out;
-        }
-        &:hover,
-        &:active,
-        &:focus {
-            transition: all 1s ease-out;
-            outline: 0;
-            p,
-            h6 {
-                color: $white;
-                position: relative;
-                z-index: 1;
-                transition: all 1s ease-out;
+            overflow: hidden;
+            svg path {
+                fill: darken($color: $primary, $amount: 30%);
             }
-            .card-section {
-                position: relative;
-                background-color: $primary;
-                transition: all 1s ease-in-out;
-                overflow: hidden;
-                svg path {
-                    fill: darken($color: $primary, $amount: 30%);
-                }
 
-                .text-portion {
-                    transition: all 1s ease-in-out;
-                }
-                svg {
-                    width: 70%;
-                    opacity: 0.5;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    transition: all 0.7s ease-out;
-                }
+            .text-portion {
+                transition: all 1s ease-in-out;
+            }
+            svg {
+                width: 70%;
+                opacity: 0.5;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: all 0.7s ease-out;
             }
         }
     }
 }
-
 //------------------------------------------------------------Manifesto-------------------------------------------//
 .manifesto {
     padding: 150px 0;
@@ -375,83 +397,20 @@
         text-align: right;
         .auther-name {
             font-family: $akkurat;
-            @include text(40px, 40px, 400, $white);
+            @include text(30px, 40px, 400, $white);
             margin-bottom: 25px;
         }
         .auther-designation {
-            @include text(30px, 40px, 300, $gray3);
+            @include text(24px, 40px, 300, $gray3);
         }
     }
-    .navigation {
-        width: 100%;
-        position: absolute;
-        bottom: 70px;
-        padding: 0 100px;
-        .left-div {
-            width: 50%;
-            float: left;
-            transition: all 0.5s ease-out;
-            a {
-                float: left;
-                transition: all 0.5s ease-out;
-                svg {
-                    transform: rotateY(180deg);
-                    margin-right: 30px;
-                    transition: all 0.5s ease-out;
-                }
-                &:hover,
-                &:active,
-                &:focus {
-                    color: $white;
-                    text-decoration: none;
-                    transition: all 0.5s ease-out;
-                    position: relative;
-                    span {
-                        @include circle(100px, $primary);
-                        font-weight: 700 !important;
-                        position: absolute;
-                        left: 0px;
-                        transition: all 0.5s ease-out;
-                        svg {
-                            margin: 0;
-                            transition: all 0.5s ease-out;
-                        }
-                    }
-                }
-            }
-        }
-        .right-div {
-            width: 50%;
-            float: right;
-            transition: all 0.5s ease-out;
-            a {
-                float: right;
-                transition: all 0.5s ease-out;
-                &:hover,
-                &:active,
-                &:focus {
-                    color: $white;
-                    text-decoration: none;
-                    transition: all 0.5s ease-out;
-                    position: relative;
-                    span {
-                        @include circle(100px, $primary);
-                        font-weight: 700 !important;
-                        position: absolute;
-                        right: 0px;
-                        transition: all 0.5s ease-out;
-                        svg {
-                            margin: 0;
-                            transition: all 0.5s ease-out;
-                        }
-                    }
-                }
-            }
-        }
-    }
+
     .carousel-control-next,
     .carousel-control-prev {
-        top: inherit;
+        position: relative;
+        top: inherit !important;
+        bottom: inherit !important;
+        width: auto !important;
     }
 }
 //------------------------------------------------------------Footer-------------------------------------------//
@@ -557,7 +516,21 @@
     textarea {
         margin-bottom: 50px;
     }
+    .move-top {
+        @include circle(100px, $primary);
+        @include text(18px, 24px, 400, $white);
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        text-decoration: none;
+        text-align: center;
+    }
 }
 .a-pad {
     padding-bottom: 10px;
+}
+.offcanvas {
+    .nav-link {
+        padding-left: 0 !important;
+    }
 }
