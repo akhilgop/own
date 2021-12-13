@@ -1731,6 +1731,628 @@ html:not(html:hover) .cursor::after {
           transform: scale(0);
 }
 
+@media screen and (max-width: 767px) {
+  .nb {
+    height: 70px !important;
+  }
+  .navbar-brand svg {
+    width: 40px;
+  }
+  .offcanvas .nav-link.text-xxxl {
+    font-size: 50px !important;
+  }
+  .offcanvas .combo-box p.text-muted {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .offcanvas .combo-box a {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .banner h1 {
+    font-size: 50px !important;
+    line-height: 1.5 !important;
+  }
+  .about-brief .left-panel {
+    padding: 30px !important;
+  }
+  .about-brief .left-panel p.gs_reveal {
+    font-size: 20px !important;
+    line-height: 2 !important;
+  }
+  .about-brief .left-panel .know-more-section {
+    margin-top: 20px !important;
+  }
+  .about-brief .left-panel .know-more-section a {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .about-brief .left-panel .underline-div {
+    margin-top: 20px !important;
+  }
+  .about-brief .right-panel {
+    display: block !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .about-brief .right-panel .position-div {
+    position: relative !important;
+    right: inherit !important;
+    bottom: inherit !important;
+  }
+  .about-brief .right-panel .social-links {
+    display: none;
+  }
+  .services {
+    padding: 100px 0 50px 0 !important;
+  }
+  .services h2 {
+    font-size: 40px !important;
+  }
+  .manifesto,
+  .works,
+  .clients {
+    padding: 50px 0 !important;
+  }
+  .manifesto h2,
+  .works h2,
+  .clients h2 {
+    font-size: 40px !important;
+  }
+  .manifesto .scroll-counter {
+    margin-top: 30px !important;
+  }
+  .manifesto .scroll-counter .scroll-text ul {
+    padding: 0 !important;
+  }
+  .manifesto .scroll-counter .scroll-text ul li {
+    font-size: 24px !important;
+    line-height: 2 !important;
+    margin-bottom: 20px !important;
+  }
+  .manifesto .scroll-counter .scroll-text ul li::before {
+    display: none;
+  }
+  .card-section {
+    padding: 20px !important;
+    margin-bottom: 20px;
+  }
+  .card-section:last-child {
+    margin-bottom: 0;
+  }
+  .card-section .text-portion h6 {
+    margin: 20px 0 !important;
+    font-size: 24px !important;
+  }
+  .text-banner .content {
+    padding: 50px 20px !important;
+  }
+  .text-banner .content h6 {
+    margin: 20px 0 !important;
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+  }
+  .text-banner .content p.gs_reveal {
+    font-size: 20px !important;
+    line-height: 2 !important;
+    margin-bottom: 20px !important;
+  }
+  .domains {
+    padding: 0 0 50px 0 !important;
+  }
+  .domains ul li {
+    font-size: 40px !important;
+    line-height: 1.5 !important;
+    display: block;
+    margin-right: 0 !important;
+    margin-bottom: 30px !important;
+  }
+  .domains .horizondal-ul {
+    padding: 0 20px;
+  }
+  .works p.gs_reveal {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+  .works a.text-white {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+  .works .my-work p.name {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .works .my-work p {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .clients p {
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+  }
+  .testimonials .ui-panel .quote img {
+    width: 50% !important;
+  }
+  .testimonials #carouselExampleInterval {
+    padding: 30px !important;
+  }
+  .testimonials .main-content p {
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+    font-weight: 300 !important;
+  }
+  .testimonials .auther-info h6 {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .testimonials .auther-info p {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+  .testimonials .navigation {
+    margin-top: 20px !important;
+  }
+  .footer {
+    padding: 50px 0 0 0 !important;
+  }
+  .footer h3 {
+    font-size: 40px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+  }
+  .footer .contact-section {
+    margin-bottom: 40px !important;
+  }
+  .footer .contact-section span {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .footer .contact-section p,
+  .footer .contact-section a {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .footer .form-secton label {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .footer .form-secton .form-control {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .footer .form-secton .col-xl-12 .mb-5 {
+    margin-bottom: 10px !important;
+  }
+  .footer .form-secton .col-xl-12 .mb-5 textarea {
+    margin-bottom: 0 !important;
+  }
+  .footer .footer-bottom p,
+  .footer .footer-bottom a {
+    font-size: 20px !important;
+    line-height: 1 !important;
+    text-align: center;
+  }
+  .footer .footer-bottom .social-links {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .nb {
+    height: 90px !important;
+  }
+  .navbar-brand svg {
+    width: 40px;
+  }
+  .offcanvas .nav-link.text-xxxl {
+    font-size: 50px !important;
+  }
+  .offcanvas .combo-box p.text-muted {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .offcanvas .combo-box a {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .banner h1 {
+    font-size: 80px !important;
+    line-height: 1.5 !important;
+  }
+  .about-brief .left-panel {
+    padding: 30px !important;
+  }
+  .about-brief .left-panel p.gs_reveal {
+    font-size: 20px !important;
+    line-height: 2 !important;
+  }
+  .about-brief .left-panel .know-more-section {
+    margin-top: 20px !important;
+  }
+  .about-brief .left-panel .know-more-section a {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .about-brief .left-panel .underline-div {
+    margin-top: 20px !important;
+  }
+  .about-brief .right-panel {
+    display: block !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .about-brief .right-panel .position-div {
+    position: relative !important;
+    right: inherit !important;
+    bottom: inherit !important;
+  }
+  .about-brief .right-panel .social-links {
+    display: none;
+  }
+  .services {
+    padding: 100px 0 50px 0 !important;
+  }
+  .services h2 {
+    font-size: 40px !important;
+  }
+  .services .col-xl-4 {
+    margin-bottom: 40px !important;
+  }
+  .manifesto,
+  .works,
+  .clients {
+    padding: 50px 0 !important;
+  }
+  .manifesto h2,
+  .works h2,
+  .clients h2 {
+    font-size: 40px !important;
+  }
+  .manifesto .scroll-counter {
+    margin-top: 30px !important;
+  }
+  .manifesto .scroll-counter .scroll-text ul {
+    padding: 0 !important;
+  }
+  .manifesto .scroll-counter .scroll-text ul li {
+    font-size: 24px !important;
+    line-height: 2 !important;
+    margin-bottom: 20px !important;
+  }
+  .manifesto .scroll-counter .scroll-text ul li::before {
+    display: none;
+  }
+  .card-section {
+    padding: 20px !important;
+    margin-bottom: 20px;
+  }
+  .card-section:last-child {
+    margin-bottom: 0;
+  }
+  .card-section .text-portion h6 {
+    margin: 20px 0 !important;
+    font-size: 24px !important;
+  }
+  .horizondal-ul li::before {
+    top: 30px !important;
+  }
+  .text-banner .content {
+    padding: 50px 20px !important;
+  }
+  .text-banner .content h6 {
+    margin: 20px 0 !important;
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+  }
+  .text-banner .content p.gs_reveal {
+    font-size: 20px !important;
+    line-height: 2 !important;
+    margin-bottom: 20px !important;
+  }
+  .domains {
+    padding: 0 0 50px 0 !important;
+  }
+  .domains ul li {
+    font-size: 40px !important;
+    line-height: 1.5 !important;
+    display: block;
+    margin-right: 0 !important;
+    margin-bottom: 30px !important;
+  }
+  .domains .horizondal-ul {
+    padding: 0 50px 0 25%;
+  }
+  .ui-panel .quote {
+    top: -50px !important;
+  }
+  .works p.gs_reveal {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+  .works a.text-white {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+  .works .my-work p.name {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .works .my-work p {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .clients p {
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+  }
+  .testimonials #carouselExampleInterval {
+    padding: 50px !important;
+  }
+  .testimonials .main-content p {
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+    font-weight: 300 !important;
+  }
+  .testimonials .auther-info h6 {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .testimonials .auther-info p {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+  .testimonials .navigation {
+    margin-top: 20px !important;
+  }
+  .footer {
+    padding: 50px 0 0 0 !important;
+  }
+  .footer h3 {
+    font-size: 40px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+  }
+  .footer .contact-section {
+    margin-bottom: 40px !important;
+  }
+  .footer .contact-section span {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .footer .contact-section p,
+  .footer .contact-section a {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .footer .form-secton label {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .footer .form-secton .form-control {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .footer .form-secton .col-xl-12 .mb-5 {
+    margin-bottom: 10px !important;
+  }
+  .footer .form-secton .col-xl-12 .mb-5 textarea {
+    margin-bottom: 0 !important;
+  }
+  .footer .footer-bottom p,
+  .footer .footer-bottom a {
+    font-size: 20px !important;
+    line-height: 1 !important;
+    text-align: center;
+  }
+  .footer .footer-bottom .social-links {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .nb {
+    height: 90px !important;
+  }
+  .navbar-brand svg {
+    width: 40px;
+  }
+  .offcanvas .nav-link.text-xxxl {
+    font-size: 50px !important;
+  }
+  .offcanvas .combo-box p.text-muted {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .offcanvas .combo-box a {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .banner h1 {
+    font-size: 80px !important;
+    line-height: 1.5 !important;
+  }
+  .about-brief .left-panel {
+    padding: 50px 160px 50px 50px !important;
+  }
+  .about-brief .left-panel p.gs_reveal {
+    font-size: 20px !important;
+    line-height: 2 !important;
+  }
+  .about-brief .left-panel .know-more-section {
+    margin-top: 20px !important;
+  }
+  .about-brief .left-panel .know-more-section a {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .about-brief .left-panel .underline-div {
+    margin-top: 20px !important;
+  }
+  .services {
+    padding: 100px 0 50px 0 !important;
+  }
+  .services h2 {
+    font-size: 40px !important;
+  }
+  .services .col-xl-4 {
+    margin-bottom: 40px !important;
+  }
+  .manifesto,
+  .works,
+  .clients {
+    padding: 50px 0 !important;
+  }
+  .manifesto h2,
+  .works h2,
+  .clients h2 {
+    font-size: 40px !important;
+  }
+  .manifesto .scroll-counter {
+    margin-top: 30px !important;
+  }
+  .manifesto .scroll-counter .scroll-text ul {
+    padding: 0 !important;
+  }
+  .manifesto .scroll-counter .scroll-text ul li {
+    font-size: 24px !important;
+    line-height: 2 !important;
+    margin-bottom: 20px !important;
+  }
+  .card-section {
+    padding: 30px !important;
+  }
+  .card-section .text-portion h6 {
+    margin: 20px 0 !important;
+    font-size: 24px !important;
+  }
+  .horizondal-ul li::before {
+    top: 30px !important;
+  }
+  .text-banner .content {
+    padding: 50px 20px !important;
+  }
+  .text-banner .content h6 {
+    margin: 30px 0 !important;
+    font-size: 30px !important;
+    line-height: 1.5 !important;
+  }
+  .text-banner .content p.gs_reveal {
+    font-size: 30px !important;
+    line-height: 2 !important;
+    margin-bottom: 20px !important;
+  }
+  .domains {
+    padding: 0 0 50px 0 !important;
+  }
+  .domains ul li {
+    font-size: 40px !important;
+  }
+  .ui-panel .quote {
+    top: -50px !important;
+  }
+  .works p.gs_reveal {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+  .works a.text-white {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+  .works .my-work p.name {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .works .my-work p {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .clients p {
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+  }
+  .testimonials #carouselExampleInterval {
+    padding: 50px !important;
+  }
+  .testimonials .main-content p {
+    font-size: 24px !important;
+    line-height: 1.5 !important;
+    font-weight: 300 !important;
+  }
+  .testimonials .auther-info h6 {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .testimonials .auther-info p {
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+  }
+  .testimonials .navigation {
+    margin-top: 20px !important;
+  }
+  .footer {
+    padding: 50px 0 0 0 !important;
+  }
+  .footer h3 {
+    font-size: 40px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+  }
+  .footer .contact-section {
+    margin-bottom: 40px !important;
+  }
+  .footer .contact-section span {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .footer .contact-section p,
+  .footer .contact-section a {
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  .footer .form-secton label {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .footer .form-secton .form-control {
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+  .footer .form-secton .col-xl-12 .mb-5 {
+    margin-bottom: 10px !important;
+  }
+  .footer .form-secton .col-xl-12 .mb-5 textarea {
+    margin-bottom: 0 !important;
+  }
+  .footer .footer-bottom p,
+  .footer .footer-bottom a {
+    font-size: 20px !important;
+    line-height: 1 !important;
+    text-align: center;
+  }
+  .footer .footer-bottom .social-links {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  .banner h1 {
+    font-size: 100px !important;
+    line-height: 1.5 !important;
+  }
+  .text-banner .content {
+    padding: 150px !important;
+  }
+  .domains {
+    padding-top: 0 !important;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1720px !important;
