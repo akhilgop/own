@@ -16,7 +16,7 @@ ScrollTrigger.create({
 
 //---------------------------------------------------------------------Animate on Scroll------------------------------------------------------------------
 function animateFrom(elem, direction) {
-    // 'use strict';
+    'use strict';
     direction = direction || 1;
     var x = 0,
         y = direction * 100;
@@ -131,7 +131,6 @@ document.querySelectorAll('.cursor').forEach(cursor => {
     // })
 })
 
-// ---------------------------------------------------------------------Full Screen Section--------------------------------------------------------------
 // ---------------------------------------------------------------------Locomotive Scroll--------------------------------------------------------------
 window.addEventListener("load", function () {
     gsap.registerPlugin(ScrollTrigger);
@@ -142,7 +141,8 @@ window.addEventListener("load", function () {
     const scroller = new LocomotiveScroll({
         el: pageContainer,
         smooth: false,
-        getDirection: true
+        getDirection: true,
+        getSpeed: 1
     });
 
 

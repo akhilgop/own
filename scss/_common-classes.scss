@@ -62,9 +62,18 @@ section.bg-secondary {
 .text-md-sm {
     font-size: 24px !important;
 }
+.text-sm {
+    font-size: 18px !important;
+}
 .text-xxxl {
     font-size: 80px !important;
 }
+
+.h2c {
+    font-size: 72px !important;
+    margin-bottom: 50px !important;
+}
+
 // ----------------------------------------------------------------Image Container---------------------------------------------------------------//
 .img-container {
     width: 100%;
@@ -488,7 +497,24 @@ section.bg-secondary {
 .bg-black {
     background-color: $secondary;
 }
-
+@media screen and (max-width: 767px) {
+    .text-lg {
+        font-size: 20px !important;
+    }
+    .text-md {
+        font-size: 24px !important;
+    }
+    .text-md-sm {
+        font-size: 18px !important;
+    }
+    .text-xxxl {
+        font-size: 30px !important;
+    }
+    .h2c {
+        font-size: 36px !important;
+        margin-bottom: 30px !important;
+    }
+}
 @media screen and (min-width: 576px) and (max-width: 767px) {
 }
 

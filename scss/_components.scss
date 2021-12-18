@@ -326,26 +326,35 @@ textarea {
 .accordion-button,
 .accordion-button:not(.collapsed) {
     &::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23059762' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23111' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
     }
 }
-.accordion-item:first-of-type .accordion-button,
-.accordion-item:first-of-type {
-    border-top-left-radius: $bdr-rds2;
-    border-top-right-radius: $bdr-rds2;
-}
-.accordion-item:last-of-type .accordion-button.collapsed,
-.accordion-item:last-of-type {
-    border-bottom-right-radius: $bdr-rds2;
-    border-bottom-left-radius: $bdr-rds2;
-}
 .accordion-button:not(.collapsed) {
-    background-color: rgba($color: $primary, $alpha: 0.1);
-    color: $primary;
+    &::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23002bdc' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
+    }
 }
 .accordion-button {
-    padding: 30px 20px;
-    font-size: 18px;
+    padding: 50px 0 !important;
+    font-size: 50px !important;
+    // font-family: $akkurat;
+    span {
+        font-family: $ivymode;
+    }
+}
+.accordion-button:not(.collapsed) {
+    color: $primary !important;
+    background-color: $white !important;
+    box-shadow: none !important;
+}
+.accordion-item {
+    border-left: 0 !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 2px solid $bdr !important;
+    &:first-child {
+        border-top: 2px solid $bdr !important;
+    }
 }
 // -------------------------------------------------------------------Toggle Buttons--------------------------------------------------------------------//
 .btn-check:active + .btn-outline-primary:focus,
@@ -449,11 +458,14 @@ textarea {
 // ------------------------------------------------------------------Progress Bar-----------------------------------------------------------------//
 .progress-bar {
     height: 10px;
-    border-radius: $bdr-rds;
+    border-radius: 0 !important;
+    background-color: $primary !important;
 }
 .progress {
     margin-bottom: 10px;
-    height: 10px;
+    height: 10px !important;
+    border-radius: 0 !important;
+    background: transparent !important;
     &:last-child {
         margin-bottom: 0px;
     }
