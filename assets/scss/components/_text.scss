@@ -1,0 +1,542 @@
+// ----------------------------------------------------Text-----------------------------------------------------//
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+h4 {
+    font-size: $h4;
+}
+
+h5 {
+    font-size: $h5;
+}
+
+h6 {
+    font-size: $h6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    font-family: $ivymode;
+    span {
+        font-family: $ivymode;
+    }
+}
+p,
+a,
+span,
+label {
+    font-family: $akkurat;
+}
+p {
+    font-size: $p;
+    line-height: $line-height-lg;
+    color: $body-color;
+}
+
+a {
+    font-size: $p;
+    text-decoration: none;
+    @include transition;
+    color: $primary;
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        outline: 0;
+        text-decoration: none;
+        color: darken($color: $primary, $amount: 10%);
+    }
+}
+// ----------------------------------------------------------------Font Sizes---------------------------------------------------------------//
+.fw-300 {
+    font-weight: 300 !important;
+}
+.fw-400 {
+    font-weight: 400 !important;
+}
+.fw-500 {
+    font-weight: 500 !important;
+}
+.fw-600 {
+    font-weight: 600 !important;
+}
+.fs-10 {
+    font-size: $fs-10 !important;
+}
+.fs-12 {
+    font-size: $fs-12 !important;
+}
+.fs-14 {
+    font-size: $fs-14 !important;
+}
+.fs-16 {
+    font-size: $fs-16 !important;
+}
+.fs-18 {
+    font-size: $fs-18 !important;
+}
+.fs-20 {
+    font-size: $fs-20 !important;
+}
+.fs-24 {
+    font-size: $fs-24 !important;
+}
+.fs-30 {
+    font-size: $fs-30 !important;
+}
+.fs-36 {
+    font-size: $fs-36 !important;
+}
+.fs-40 {
+    font-size: $fs-40 !important;
+}
+.fs-48 {
+    font-size: $fs-48 !important;
+}
+.fs-56 {
+    font-size: $fs-56 !important;
+}
+.fs-64 {
+    font-size: $fs-64 !important;
+}
+.fs-60 {
+    font-size: 60px !important;
+}
+.fs-72 {
+    font-size: $fs-72 !important;
+}
+.fs-80 {
+    font-size: $fs-80 !important;
+}
+.fs-90 {
+    font-size: $fs-90 !important;
+}
+.fs-100 {
+    font-size: $fs-100 !important;
+}
+// ----------------------------------------------------------------Pseudo Elements---------------------------------------------------------------//
+:hover {
+    @include transition;
+}
+// ----------------------------------------------------------------Media Queries----------------------------------------------------------------//
+@media (min-width: 1200px) {
+    .fs-1 {
+        font-size: 3.5rem !important;
+    }
+    .fs-2 {
+        font-size: 3rem !important;
+    }
+    .fs-3 {
+        font-size: 2.5rem !important;
+    }
+    .fs-4 {
+        font-size: 2rem !important;
+    }
+    .fs-5 {
+        font-size: 1.5rem !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .fw-sm-300 {
+        font-weight: 300 !important;
+    }
+    .fw-sm-400 {
+        font-weight: 400 !important;
+    }
+    .fw-sm-500 {
+        font-weight: 500 !important;
+    }
+    .fw-sm-600 {
+        font-weight: 600 !important;
+    }
+    .fs-sm-10 {
+        font-size: $fs-10 !important;
+    }
+    .fs-sm-12 {
+        font-size: $fs-12 !important;
+    }
+    .fs-sm-14 {
+        font-size: $fs-14 !important;
+    }
+    .fs-sm-16 {
+        font-size: $fs-16 !important;
+    }
+    .fs-sm-18 {
+        font-size: $fs-18 !important;
+    }
+    .fs-sm-20 {
+        font-size: $fs-20 !important;
+    }
+    .fs-sm-24 {
+        font-size: $fs-24 !important;
+    }
+    .fs-sm-30 {
+        font-size: $fs-30 !important;
+    }
+    .fs-sm-36 {
+        font-size: $fs-36 !important;
+    }
+    .fs-sm-40 {
+        font-size: $fs-40 !important;
+    }
+    .fs-sm-48 {
+        font-size: $fs-48 !important;
+    }
+    .fs-sm-56 {
+        font-size: $fs-56 !important;
+    }
+    .fs-sm-64 {
+        font-size: $fs-64 !important;
+    }
+    .fs-sm-72 {
+        font-size: $fs-72 !important;
+    }
+    .fs-sm-80 {
+        font-size: $fs-80 !important;
+    }
+    .fs-sm-90 {
+        font-size: $fs-90 !important;
+    }
+    .fs-sm-100 {
+        font-size: $fs-100 !important;
+    }
+}
+@media screen and (min-width: 768px) {
+    .fw-md-300 {
+        font-weight: 300 !important;
+    }
+    .fw-md-400 {
+        font-weight: 400 !important;
+    }
+    .fw-md-500 {
+        font-weight: 500 !important;
+    }
+    .fw-md-600 {
+        font-weight: 600 !important;
+    }
+    .fs-md-10 {
+        font-size: $fs-10 !important;
+    }
+    .fs-md-12 {
+        font-size: $fs-12 !important;
+    }
+    .fs-md-14 {
+        font-size: $fs-14 !important;
+    }
+    .fs-md-16 {
+        font-size: $fs-16 !important;
+    }
+    .fs-md-18 {
+        font-size: $fs-18 !important;
+    }
+    .fs-md-20 {
+        font-size: $fs-20 !important;
+    }
+    .fs-md-24 {
+        font-size: $fs-24 !important;
+    }
+    .fs-md-30 {
+        font-size: $fs-30 !important;
+    }
+    .fs-md-36 {
+        font-size: $fs-36 !important;
+    }
+    .fs-md-40 {
+        font-size: $fs-40 !important;
+    }
+    .fs-md-48 {
+        font-size: $fs-48 !important;
+    }
+    .fs-md-56 {
+        font-size: $fs-56 !important;
+    }
+    .fs-md-64 {
+        font-size: $fs-64 !important;
+    }
+    .fs-md-72 {
+        font-size: $fs-72 !important;
+    }
+    .fs-md-80 {
+        font-size: $fs-80 !important;
+    }
+    .fs-md-90 {
+        font-size: $fs-90 !important;
+    }
+    .fs-md-100 {
+        font-size: $fs-100 !important;
+    }
+}
+@media screen and (min-width: 992px) {
+    .fw-lg-300 {
+        font-weight: 300 !important;
+    }
+    .fw-lg-400 {
+        font-weight: 400 !important;
+    }
+    .fw-lg-500 {
+        font-weight: 500 !important;
+    }
+    .fw-lg-600 {
+        font-weight: 600 !important;
+    }
+    .fs-lg-10 {
+        font-size: $fs-10 !important;
+    }
+    .fs-lg-12 {
+        font-size: $fs-12 !important;
+    }
+    .fs-lg-14 {
+        font-size: $fs-14 !important;
+    }
+    .fs-lg-16 {
+        font-size: $fs-16 !important;
+    }
+    .fs-lg-18 {
+        font-size: $fs-18 !important;
+    }
+    .fs-lg-20 {
+        font-size: $fs-20 !important;
+    }
+    .fs-lg-24 {
+        font-size: $fs-24 !important;
+    }
+    .fs-lg-30 {
+        font-size: $fs-30 !important;
+    }
+    .fs-lg-36 {
+        font-size: $fs-36 !important;
+    }
+    .fs-lg-40 {
+        font-size: $fs-40 !important;
+    }
+    .fs-lg-48 {
+        font-size: $fs-48 !important;
+    }
+    .fs-lg-56 {
+        font-size: $fs-56 !important;
+    }
+    .fs-lg-64 {
+        font-size: $fs-64 !important;
+    }
+    .fs-lg-72 {
+        font-size: $fs-72 !important;
+    }
+    .fs-lg-80 {
+        font-size: $fs-80 !important;
+    }
+    .fs-lg-90 {
+        font-size: $fs-90 !important;
+    }
+    .fs-lg-100 {
+        font-size: $fs-100 !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .fw-xl-300 {
+        font-weight: 300 !important;
+    }
+    .fw-xl-400 {
+        font-weight: 400 !important;
+    }
+    .fw-xl-500 {
+        font-weight: 500 !important;
+    }
+    .fw-xl-600 {
+        font-weight: 600 !important;
+    }
+    .fs-xl-10 {
+        font-size: $fs-10 !important;
+    }
+    .fs-xl-12 {
+        font-size: $fs-12 !important;
+    }
+    .fs-xl-14 {
+        font-size: $fs-14 !important;
+    }
+    .fs-xl-16 {
+        font-size: $fs-16 !important;
+    }
+    .fs-xl-18 {
+        font-size: $fs-18 !important;
+    }
+    .fs-xl-20 {
+        font-size: $fs-20 !important;
+    }
+    .fs-xl-24 {
+        font-size: $fs-24 !important;
+    }
+    .fs-xl-30 {
+        font-size: $fs-30 !important;
+    }
+    .fs-xl-36 {
+        font-size: $fs-36 !important;
+    }
+    .fs-xl-40 {
+        font-size: $fs-40 !important;
+    }
+    .fs-xl-48 {
+        font-size: $fs-48 !important;
+    }
+    .fs-xl-56 {
+        font-size: $fs-56 !important;
+    }
+    .fs-xl-64 {
+        font-size: $fs-64 !important;
+    }
+    .fs-xl-72 {
+        font-size: $fs-72 !important;
+    }
+    .fs-xl-80 {
+        font-size: $fs-80 !important;
+    }
+    .fs-xl-90 {
+        font-size: $fs-90 !important;
+    }
+    .fs-xl-100 {
+        font-size: $fs-100 !important;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .fw-xxl-300 {
+        font-weight: 300 !important;
+    }
+    .fw-xxl-400 {
+        font-weight: 400 !important;
+    }
+    .fw-xxl-500 {
+        font-weight: 500 !important;
+    }
+    .fw-xxl-600 {
+        font-weight: 600 !important;
+    }
+    .fs-xxl-10 {
+        font-size: $fs-10 !important;
+    }
+    .fs-xxl-12 {
+        font-size: $fs-12 !important;
+    }
+    .fs-xxl-14 {
+        font-size: $fs-14 !important;
+    }
+    .fs-xxl-16 {
+        font-size: $fs-16 !important;
+    }
+    .fs-xxl-18 {
+        font-size: $fs-18 !important;
+    }
+    .fs-xxl-20 {
+        font-size: $fs-20 !important;
+    }
+    .fs-xxl-24 {
+        font-size: $fs-24 !important;
+    }
+    .fs-xxl-30 {
+        font-size: $fs-30 !important;
+    }
+    .fs-xxl-36 {
+        font-size: $fs-36 !important;
+    }
+    .fs-xxl-40 {
+        font-size: $fs-40 !important;
+    }
+    .fs-xxl-48 {
+        font-size: $fs-48 !important;
+    }
+    .fs-xxl-56 {
+        font-size: $fs-56 !important;
+    }
+    .fs-xxl-64 {
+        font-size: $fs-64 !important;
+    }
+    .fs-xxl-72 {
+        font-size: $fs-72 !important;
+    }
+    .fs-xxl-80 {
+        font-size: $fs-80 !important;
+    }
+    .fs-xxl-90 {
+        font-size: $fs-90 !important;
+    }
+    .fs-xxl-100 {
+        font-size: $fs-100 !important;
+    }
+}
+@media screen and (min-width: 1700px) {
+    .fw-xxxl-300 {
+        font-weight: 300 !important;
+    }
+    .fw-xxxl-400 {
+        font-weight: 400 !important;
+    }
+    .fw-xxxl-500 {
+        font-weight: 500 !important;
+    }
+    .fw-xxxl-600 {
+        font-weight: 600 !important;
+    }
+    .fs-xxxl-10 {
+        font-size: $fs-10 !important;
+    }
+    .fs-xxxl-12 {
+        font-size: $fs-12 !important;
+    }
+    .fs-xxxl-14 {
+        font-size: $fs-14 !important;
+    }
+    .fs-xxxl-16 {
+        font-size: $fs-16 !important;
+    }
+    .fs-xxxl-18 {
+        font-size: $fs-18 !important;
+    }
+    .fs-xxxl-20 {
+        font-size: $fs-20 !important;
+    }
+    .fs-xxxl-24 {
+        font-size: $fs-24 !important;
+    }
+    .fs-xxxl-30 {
+        font-size: $fs-30 !important;
+    }
+    .fs-xxxl-36 {
+        font-size: $fs-36 !important;
+    }
+    .fs-xxxl-40 {
+        font-size: $fs-40 !important;
+    }
+    .fs-xxxl-48 {
+        font-size: $fs-48 !important;
+    }
+    .fs-xxxl-56 {
+        font-size: $fs-56 !important;
+    }
+    .fs-xxxl-64 {
+        font-size: $fs-64 !important;
+    }
+    .fs-xxxl-72 {
+        font-size: $fs-72 !important;
+    }
+    .fs-xxxl-80 {
+        font-size: $fs-80 !important;
+    }
+    .fs-xxxl-90 {
+        font-size: $fs-90 !important;
+    }
+    .fs-xxxl-100 {
+        font-size: $fs-100 !important;
+    }
+}

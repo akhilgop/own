@@ -140,7 +140,7 @@ window.addEventListener("load", function () {
 
     const scroller = new LocomotiveScroll({
         el: pageContainer,
-        smooth: false,
+        smooth: true,
         getDirection: true,
         getSpeed: 1
     });

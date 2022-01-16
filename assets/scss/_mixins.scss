@@ -1,4 +1,3 @@
-@import "variables";
 // ----------------------------------------------------Mixins Library-----------------------------------------------------
 @mixin p-white {
     color: $white;
@@ -14,14 +13,14 @@
     text-decoration: none;
 }
 
-@mixin buttn($bg, $color, $bdr) {
+@mixin buttn($bg, $color, $border-color) {
     background: $bg;
     color: $color;
-    border: 1px solid $bdr;
+    border: 1px solid $border-color;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
-    transition: all 0.5s ease-out;
+    @include transition;
     &:hover,
     &:active,
     &:focus {
@@ -29,15 +28,33 @@
         border-color: darken($color: $bg, $amount: 10%);
     }
 }
-
-@mixin buttn-outline($bg, $color, $bdr) {
+@mixin gradient-button($bg, $color) {
     background: $bg;
     color: $color;
-    border: 1px solid $bdr;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
-    transition: all 0.5s ease-out;
+    @include transition;
+    border: none;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $white;
+        background: $black;
+        @include transition;
+    }
+}
+@mixin bg($bg) {
+    background-color: $bg !important;
+}
+@mixin buttn-outline($bg, $color, $border-color) {
+    background: $bg;
+    color: $color;
+    border: 1px solid $border-color;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    @include transition;
     &:hover,
     &:active,
     &:focus {
@@ -69,6 +86,11 @@
 
 @mixin flex-hv-cntr {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin in-flex-hv-cntr {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
@@ -113,31 +135,40 @@
 }
 
 @mixin circle($unit, $bg) {
-    width: $unit;
-    height: $unit;
+    width: $unit !important;
+    height: $unit !important;
+    min-width: $unit !important;
     border-radius: 50%;
-    background-color: $bg;
+    background-color: $bg !important;
+    @include flex-hv-cntr;
+}
+@mixin square($unit) {
+    width: $unit !important;
+    height: $unit !important;
+    min-width: $unit !important;
+    border-radius: $form-rds !important;
     @include flex-hv-cntr;
 }
 @mixin round($unit) {
-    width: $unit;
-    height: $unit;
-    border-radius: $unit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin outline-circle($color) {
-    color: $color;
-    border: 1px solid $color;
+    width: $unit !important;
+    height: $unit !important;
+    min-width: $unit !important;
+    border-radius: $unit !important;
+    @include flex-hv-cntr;
 }
 @mixin circle-image($unit) {
     width: $unit;
     height: $unit;
+    min-width: $unit;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+}
+
+@mixin outline-circle($color) {
+    color: $color;
+    border: 1px solid $color;
 }
 @mixin text($fs, $lh, $fw, $clr) {
     font-size: $fs;
@@ -146,12 +177,12 @@
     color: $clr;
 }
 @mixin box-shadow($r, $b, $g, $opacity) {
-    box-shadow: 0px 1px 6px rgba($r, $b, 0$g, $opacity);
+    box-shadow: 0px 1px 6px rgba($r, $b, $g, $opacity);
 }
-@mixin sticky {
+@mixin sticky($top) {
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 0;
+    top: $top;
 }
 @mixin right-align {
     @include flex-hv-cntr;
@@ -168,6 +199,11 @@
 @mixin bg-contain-nrp {
     background-size: contain;
     background-repeat: no-repeat;
+}
+@mixin text-gradient {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 // ----------------------------------------------------Animated Mixins-----------------------------------------------------
 @mixin btn-animate($bg, $color, $hover-bg) {
@@ -214,10 +250,12 @@
         height: 0%;
     }
 }
-@mixin a-animate {
+
+@mixin link-animate($color) {
     text-decoration: none;
     position: relative;
     display: inline-block;
+    color: $color !important;
     &:after {
         background: none repeat scroll 0 0 transparent;
         bottom: 0;
@@ -226,7 +264,7 @@
         height: 2px;
         left: 0;
         position: absolute;
-        background: $primary;
+        background: $color;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
     }
@@ -240,5 +278,41 @@
         box-shadow: none;
         outline: 0;
         text-decoration: none;
+        color: $color;
     }
+}
+
+@mixin buttn-light($bg) {
+    background: rgba($color: $bg, $alpha: 0.2);
+    color: $bg;
+    border: 1px solid transparent;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    @include transition;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $bg;
+        color: $white;
+        border-color: $bg;
+    }
+}
+@mixin transition {
+    transition: all 0.5s ease-out;
+}
+@mixin overlay {
+    position: absolute;
+    opacity: 0.2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+
+@mixin overlay-opacity($unit) {
+    opacity: $unit !important;
 }
