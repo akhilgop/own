@@ -1,0 +1,450 @@
+@import "mixins";
+// ------------------------------------------------------------Header-------------------------------------------//
+.nb {
+    z-index: 11;
+    background-color: $white;
+    height: 150px;
+    padding: 0 100px;
+    position: fixed;
+}
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    h1 {
+        font-size: 150px;
+        line-height: 200px;
+    }
+}
+// ------------------------------------------------------------About-------------------------------------------//
+.about-brief {
+    position: relative;
+    .left-panel {
+        background-color: $secondary;
+        padding: 100px 250px 100px 100px;
+        p {
+            font-size: 30px !important;
+            color: $white;
+            font-weight: 300;
+            line-height: 60px;
+        }
+    }
+    .social-links {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        padding-right: 100px;
+        padding-bottom: 50px;
+        .gap-lr-25 {
+            margin: 0 25px;
+        }
+        .link-social {
+            @include circle(70px, 70px);
+            background-color: $white;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $primary;
+                svg {
+                    fill: $white;
+                }
+            }
+        }
+    }
+
+    .img-container {
+        justify-content: right;
+        img {
+            box-shadow: -2rem 2rem $primary;
+        }
+    }
+    .right-panel {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 150%;
+        margin-left: -50%;
+        .position-div {
+            position: absolute;
+            right: 0;
+            bottom: -100px;
+        }
+    }
+    .img-shadow {
+        background-color: $primary;
+        margin-left: -46px;
+        margin-bottom: -46px;
+        width: 100%;
+        height: 600px;
+        display: none;
+    }
+    .know-more-section {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: right;
+        a {
+            font-size: 30px;
+            color: $white;
+            text-decoration: none;
+            justify-content: right;
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+        span {
+            margin-left: 30px;
+        }
+        .underline-div {
+            width: 100%;
+            height: 2px;
+            background-color: $color4;
+            margin-top: 25px;
+        }
+    }
+}
+// ------------------------------------------------------------Services-------------------------------------------//
+.services {
+    padding: 150px 0;
+    .service-link {
+        text-decoration: none;
+        &:hover,
+        &:active,
+        &:focus {
+            transition: all 0.5s ease-out;
+            outline: 0;
+            p,
+            h6 {
+                color: $white;
+                position: relative;
+                z-index: 1;
+            }
+            .card-section {
+                position: relative;
+                background-color: $primary;
+                transition: all 0.5s ease-out;
+                overflow: hidden;
+                svg path {
+                    fill: darken($color: $primary, $amount: 30%);
+                }
+                svg {
+                    width: 70%;
+                    opacity: 0.5;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+//------------------------------------------------------------Manifesto-------------------------------------------//
+.manifesto {
+    padding: 150px 0;
+    background-color: $secondary;
+    h2 {
+        color: $white;
+    }
+}
+
+//------------------------------------------------------------Text Banner-------------------------------------------//
+.text-banner {
+    width: 100vw;
+    // height: 100vw;
+    @include flex-cntr;
+    .content {
+        padding: 300px 200px;
+        h6 {
+            @include text(40px, 56px, 700, $black);
+            margin-bottom: 50px;
+            font-family: $akkurat;
+            text-align: center;
+        }
+        p {
+            @include text(30px, 60px, 400, $black);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+    }
+}
+//------------------------------------------------------------My Process-------------------------------------------//
+.process {
+    .left-panel {
+        position: relative;
+        background-color: $secondary;
+        padding: 100px 250px 100px 100px;
+    }
+    h2 {
+        color: $white;
+    }
+    a {
+        @include text(40px, 40px, 400, $gray3);
+        margin-bottom: 50px;
+        text-decoration: none;
+        @extend .flex-v-cntr;
+        svg {
+            display: none;
+            margin-right: 20px;
+            width: 20px;
+        }
+        .icon {
+            display: flex;
+            align-items: center;
+        }
+        p {
+            @include text(40px, 40px, 300, $gray3);
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            transition: all 0.5s ease-out;
+
+            svg {
+                display: block;
+            }
+            p {
+                color: $white;
+            }
+        }
+    }
+    .image-section {
+        background-color: $white;
+        width: 100%;
+        height: 100%;
+    }
+    .img-container {
+        justify-content: right;
+        img {
+            box-shadow: -2rem 2rem $primary;
+        }
+    }
+    .right-panel {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        width: -150%;
+        margin-left: -50%;
+        height: 100%;
+        .position-div {
+            position: absolute;
+            right: 0;
+            bottom: -100px;
+        }
+    }
+    .img-shadow {
+        background-color: $primary;
+        margin-left: -46px;
+        margin-bottom: -46px;
+        width: 100%;
+        height: 600px;
+        display: none;
+    }
+}
+//------------------------------------------------------------Domains-------------------------------------------//
+.domains {
+    padding: 150px 0;
+}
+
+//------------------------------------------------------------Works-------------------------------------------//
+.works {
+    padding: 150px 0;
+    background-color: $secondary;
+    h2 {
+        color: $white;
+    }
+    p {
+        @include text(40px, 70px, 300, $white);
+        margin-bottom: 50px;
+    }
+}
+
+//------------------------------------------------------------Clients-------------------------------------------//
+.clients {
+    padding: 150px 0;
+
+    p {
+        @include text(40px, 70px, 300, $black);
+        margin-bottom: 50px;
+        text-align: right;
+    }
+    h2 {
+        text-align: right;
+    }
+}
+//------------------------------------------------------------Testimonials-------------------------------------------//
+.testimonials {
+    .auther-info {
+        margin-top: 50px;
+        text-align: right;
+        .auther-name {
+            font-family: $akkurat;
+            @include text(40px, 40px, 400, $white);
+            margin-bottom: 25px;
+        }
+        .auther-designation {
+            @include text(30px, 40px, 300, $gray3);
+        }
+    }
+    .navigation {
+        width: 100%;
+        margin-top: 50px;
+        .left-div {
+            width: 50%;
+            float: left;
+            a {
+                float: left;
+                svg {
+                    transform: rotateY(180deg);
+                    margin-right: 30px;
+                }
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $white;
+                    text-decoration: none;
+                    transition: all 0.5s ease-out;
+                    position: relative;
+                    span {
+                        @include circle(130px, $primary);
+                        font-weight: 700 !important;
+                        position: absolute;
+                        left: 0px;
+
+                        svg {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .right-div {
+            width: 50%;
+            float: right;
+            a {
+                float: right;
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $white;
+                    text-decoration: none;
+                    transition: all 0.5s ease-out;
+                    position: relative;
+                    span {
+                        @include circle(130px, $primary);
+                        font-weight: 700 !important;
+                        position: absolute;
+                        right: -30px;
+
+                        svg {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//------------------------------------------------------------Footer-------------------------------------------//
+.footer {
+    padding: 150px 0 0px 0;
+    h3 {
+        font-family: $akkurat;
+        @include text(80px, 100px, 300, $black);
+        margin-bottom: 50px;
+    }
+    .link-common {
+        display: inline;
+        span {
+            display: inline;
+        }
+        svg {
+            path {
+                fill: $secondary;
+            }
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            color: $primary;
+            text-decoration: none;
+            transition: all 0.5s ease-out;
+            position: relative;
+            span {
+                @include circle(70px, $primary);
+                right: -80px;
+                top: -16px;
+                svg {
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+    }
+    .contact-section {
+        span {
+            @include text(24px, 24px, 300, $black);
+        }
+        p {
+            @include text(30px, 30px, 400, $black);
+            margin-top: 20px;
+        }
+        a {
+            display: block;
+            @include text(30px, 30px, 400, $primary);
+            margin-top: 20px;
+            text-decoration: none;
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: underline;
+                transition: all 0.5s ease-out;
+            }
+        }
+    }
+    .form-secton {
+        margin-bottom: 50px;
+    }
+    .footer-bottom {
+        margin-bottom: 30px;
+        p {
+            @include text(24px, 24px, 300, $black);
+            a {
+                @include text(24px, 24px, 400, $primary);
+                text-decoration: none;
+                &:hover,
+                &:active,
+                &:focus {
+                    text-decoration: underline;
+                    transition: all 0.5s ease-out;
+                }
+            }
+        }
+        .social-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            a {
+                @include text(24px, 24px, 400, $primary);
+                text-decoration: none;
+                &:hover,
+                &:active,
+                &:focus {
+                    text-decoration: underline;
+                    transition: all 0.5s ease-out;
+                }
+            }
+        }
+    }
+    textarea {
+        margin-bottom: 50px;
+    }
+}

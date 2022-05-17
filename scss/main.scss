@@ -1,31 +1,11 @@
-// General
-@import "common-classes";
+@import "components";
+@import "custom";
 @import "mixins";
 @import "responsive";
 @import "variables";
-
-// Components
-@import "components/accordion";
-@import "components/button";
-@import "components/colors";
-@import "components/height";
-@import "components/image";
-@import "components/links";
-@import "components/list";
-@import "components/margin";
-@import "components/navbar";
-@import "components/padding";
-@import "components/sidebar";
-@import "components/size";
-@import "components/text";
-@import "components/form-control";
-@import "components/other";
-@import "components/bg-image";
-@import "components/navs";
-
-// Custom Components
-@import "custom-components/custom";
-
+@import "landingPage";
+@import "alignment";
+@import "common";
 // ----------------------------------------------------Common Classes-----------------------------------------------------//
 html {
     scroll-behavior: smooth;
@@ -33,9 +13,6 @@ html {
 
 body {
     @include body;
-    font-size: 24px;
-    font-family: $akkurat;
-    transition: all 0.5s ease-out;
 }
 
 .nopad {
@@ -43,7 +20,7 @@ body {
 }
 
 .flex-center {
-    @include flex-hv-cntr;
+    @include flex-cntr;
 }
 
 .align-cntr {
