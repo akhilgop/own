@@ -1,0 +1,31 @@
+// ----------------------------------------------------Link Animate-----------------------------------------------------//
+.animate-primary {
+    @include link-animate($primary);
+}
+.animate-secondary {
+    @include link-animate($secondary);
+}
+.animate-tertiary {
+    @include link-animate($tertiary);
+}
+.animate-success {
+    @include link-animate($success);
+}
+.animate-danger {
+    @include link-animate($danger);
+}
+.animate-warning {
+    @include link-animate($warning);
+}
+.animate-info {
+    @include link-animate($info);
+}
+.animate-light {
+    @include link-animate($light);
+}
+.animate-dark {
+    @include link-animate($dark);
+}
+.animate-white {
+    @include link-animate($white);
+}

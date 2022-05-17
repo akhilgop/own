@@ -1,0 +1,75 @@
+// ----------------------------------------------------Form Control-----------------------------------------------------//
+.form-control {
+    border: none !important;
+    border-bottom: 1px solid $gray1 !important;
+    border-radius: 0 !important;
+    padding-left: 0 !important;
+    font-size: 24px !important;
+    transition: all 0.2s ease-out;
+    &:focus {
+        border-bottom: 2px solid $primary !important;
+        transition: all 0.3s ease-out;
+        box-shadow: none !important;
+        outline: 0 !important;
+        padding-left: 15px !important;
+    }
+}
+label {
+    font-family: $akkurat;
+    @include text(24px, 24px, 400, $black);
+}
+.form-check-input:checked {
+    background-color: $primary;
+    border-color: $primary;
+    box-shadow: none;
+    outline: 0;
+}
+.form-check-inline {
+    margin-right: 30px;
+}
+
+.form-control {
+    border: none !important;
+    border-bottom: 1px solid $gray1 !important;
+    border-radius: 0 !important;
+    padding-left: 0 !important;
+    font-size: 24px !important;
+    transition: all 0.2s ease-out;
+    &:focus {
+        border-bottom: 2px solid $primary !important;
+        transition: all 0.3s ease-out;
+        box-shadow: none !important;
+        outline: 0 !important;
+        padding-left: 15px !important;
+    }
+}
+label {
+    font-family: $akkurat;
+    @include text(24px, 24px, 400, $black);
+}
+textarea {
+    resize: none !important;
+}
+.form-check-input:focus {
+    box-shadow: none !important;
+}
+.form-check-label {
+    color: $body-color;
+    opacity: 0.7;
+    font-size: $p !important;
+    font-weight: 400 !important;
+}
+.input-group-text {
+    padding: 0px 20px;
+    background-color: $white;
+    border-radius: $b-rds-xs;
+}
+
+.fc-square {
+    width: $height-default !important;
+    height: $height-default !important;
+    text-align: center;
+}
+.input-group > .fc-square {
+    flex: inherit !important;
+}
