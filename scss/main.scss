@@ -3,9 +3,11 @@
 @import "mixins";
 @import "responsive";
 @import "variables";
-@import "landingPage";
 @import "alignment";
-@import "common";
+@import "common-classes";
+// ---------Pages-------------//
+@import "pages/landingpage";
+@import "pages/about";
 // ----------------------------------------------------Common Classes-----------------------------------------------------//
 html {
     scroll-behavior: smooth;
@@ -13,6 +15,7 @@ html {
 
 body {
     @include body;
+    transition: all 0.5s ease-out;
 }
 
 .nopad {
@@ -20,7 +23,7 @@ body {
 }
 
 .flex-center {
-    @include flex-cntr;
+    @include flex-hv-cntr;
 }
 
 .align-cntr {

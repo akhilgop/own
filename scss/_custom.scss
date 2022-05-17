@@ -1,2 +1,268 @@
 @import "variables";
 @import "mixins";
+body {
+    transition: 0.3s ease-out;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    overscroll-behavior: none;
+}
+
+.horizontal-scroll img {
+    height: 60vh;
+    width: auto;
+    object-fit: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.horizontal-scroll {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+}
+
+.pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 10vw;
+}
+.pin-wrap > * {
+    min-width: 40vw;
+    padding: 0 2vw;
+}
+.scroll-wrapper {
+    overflow: hidden !important;
+}
+// ------------------------------------------------------------------------Menu with Loader----------------------------------------------------------
+.gs_reveal {
+    opacity: 0;
+    visibility: hidden;
+    will-change: transform, opacity;
+}
+
+//------------------------------------------------------------------------Banner Text Reveal----------------------------------------------------------
+.heading {
+    display: inline-block;
+    position: relative;
+    margin: 0 !important;
+    overflow: hidden;
+    padding-right: 0.5em;
+    margin-bottom: 0.3em;
+    animation: text-reveal 2000ms forwards;
+    color: $black1;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        bottom: 0;
+        left: 0;
+        background: $primary;
+        animation: text-reveal-aft 1000ms forwards;
+    }
+}
+@keyframes text-reveal {
+    50% {
+        color: #fff;
+    }
+    51% {
+        color: $black1;
+    }
+    100% {
+        color: $black1;
+    }
+}
+@keyframes text-reveal-aft {
+    0% {
+    }
+    50% {
+        right: 0;
+        left: 0;
+    }
+    100% {
+        right: 0;
+        left: 100%;
+    }
+}
+.quote-text {
+    display: inline-block;
+    position: relative;
+    margin: 0 !important;
+    overflow: hidden;
+    padding-right: 0.5em;
+    margin-bottom: 0.3em;
+    animation: text-reveal1 3000ms forwards;
+    color: $white;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        bottom: 0;
+        left: 0;
+        background: $primary;
+        animation: text-reveal-aft1 2000ms forwards;
+    }
+}
+@keyframes text-reveal1 {
+    50% {
+        color: $white;
+    }
+    51% {
+        color: $white;
+    }
+    100% {
+        color: $white;
+    }
+}
+@keyframes text-reveal-aft1 {
+    0% {
+    }
+    50% {
+        right: 0;
+        left: 0;
+    }
+    100% {
+        right: 0;
+        left: 100%;
+    }
+}
+.quote-auther {
+    display: inline-block;
+    position: relative;
+    margin: 0 !important;
+    overflow: hidden;
+    padding-right: 0.5em;
+    margin-bottom: 0.3em;
+    animation: text-reveal2 3000ms backwards;
+    color: $white;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        bottom: 0;
+        right: 0;
+        background: $primary;
+        animation: text-reveal-aft2 2000ms backwards;
+    }
+}
+@keyframes text-reveal2 {
+    50% {
+        color: $white;
+    }
+    51% {
+        color: $white;
+    }
+    100% {
+        color: $white;
+    }
+}
+@keyframes text-reveal-aft2 {
+    0% {
+    }
+    50% {
+        right: 0;
+        left: 0;
+    }
+    100% {
+        right: 0;
+        left: 100%;
+    }
+}
+//------------------------------------------------------------------------Image Reveal----------------------------------------------------------
+.reveal {
+    visibility: hidden;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        transform-origin: left;
+    }
+}
+//---------------------------------------------------------------------------Cursor--------------------------------------------------------------
+html {
+    cursor: url("data:image/svg+xml,%3Csvg height='10' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23eee' r='4'/%3E%3C/svg%3E")
+            3 3,
+        auto;
+}
+
+.stroke-only {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: 600ms transform cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.transform-center-center {
+    transform-origin: center center;
+}
+
+.container {
+    position: relative;
+}
+
+.cursor {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    height: var(--height);
+    transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
+    transition: 150ms width cubic-bezier(0.39, 0.575, 0.565, 1), 150ms height cubic-bezier(0.39, 0.575, 0.565, 1),
+        150ms transform cubic-bezier(0.39, 0.575, 0.565, 1);
+    z-index: 11111;
+    pointer-events: none;
+    will-change: transform;
+}
+@media (pointer: fine) {
+    .cursor {
+        display: block;
+    }
+}
+.cursor::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius);
+    border: 2px solid $primary;
+    opacity: var(--scale);
+    -webkit-transform: scale(var(--scale));
+    transform: scale(var(--scale));
+    transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1), 300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
+        150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+html:not(html:hover) .cursor::after {
+    opacity: 0;
+    transform: scale(0);
+}
+// main {
+//     background-color: $white;
+//     position: relative;
+//     z-index: 1;
+// }
+// .footer {
+//     position: fixed;
+//     bottom: 0;
+//     width: 100%;
+//     height: 100vh;
+// }
+//---------------------------------------------------------------------------Full Screen Sections------------------------------------------------------
+
+//------------------------------------------------------------------------------Charts------------------------------------------------------------------

@@ -6,8 +6,8 @@ h1 {
 }
 
 h2 {
-    font-size: $h2 !important;
-    margin-bottom: 100px !important;
+    font-size: $h2;
+    margin-bottom: 50px !important;
 }
 
 h3 {
@@ -24,10 +24,6 @@ h5 {
 
 h6 {
     font-size: $h6;
-}
-
-p {
-    font-size: $p;
 }
 h1,
 h2,
@@ -46,21 +42,108 @@ label {
 }
 p {
     font-size: $p;
+    line-height: calc(#{$p} * 2);
+    color: $body-color;
+}
+a {
+    text-decoration: none !important;
 }
 
-a {
-    font-size: $p;
+.a-animate {
+    @include a-animate;
+}
+.bg-primary {
+    .a-animate {
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        color: $white !important;
+        &:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 0;
+            position: absolute;
+            background: $white !important;
+            -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+    }
+}
+.a-animate-white {
     text-decoration: none;
-    transition: all 0.5s ease-out;
+    position: relative;
+    display: inline-block;
+    color: $white !important;
+    &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        background: $white;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    &:hover:after {
+        width: 100%;
+        left: 0;
+    }
     &:hover,
     &:active,
     &:focus {
-        text-decoration: underline;
-        transition: all 0.5s ease-out;
+        box-shadow: none;
         outline: 0;
+        text-decoration: none;
+        color: $white;
     }
 }
-
+a {
+    font-size: $p;
+    text-decoration: none;
+    transition: 0.5s all ease-out;
+    color: $primary;
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        outline: 0;
+        text-decoration: none;
+        color: darken($color: $primary, $amount: 10%);
+    }
+}
+.dropdown-menu {
+    border-radius: $bdr-rds2;
+    border: 1px solid $bdr;
+    .dropdown-item {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: rgba($color: $primary, $alpha: 0.1);
+        }
+    }
+}
+.navbar-toggler {
+    .navbar-toggler-icon {
+        background-repeat: no-repeat;
+        @include flex-hv-cntr;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        background-color: $white;
+        color: $primary;
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+    }
+}
 // ----------------------------------------------------Button-----------------------------------------------------//
 button {
     text-align: center;
@@ -70,11 +153,22 @@ button {
     &:hover,
     &:active,
     &:focus {
-        box-shadow: none;
+        box-shadow: none !important;
         outline: 0;
     }
 }
-
+.btn {
+    height: 50px;
+    @include flex-hv-cntr;
+    padding: 0 30px;
+    border-radius: $bdr-rds;
+}
+.btn-sm {
+    height: 40px;
+}
+.btn-xs {
+    height: 30px;
+}
 .btn-primary {
     @include buttn($primary, $white, $primary);
 }
@@ -86,17 +180,54 @@ button {
 .btn-tertiary {
     @include buttn($tertiary, $white, $tertiary);
 }
-
-.btn-primary-outline {
-    @include buttn-outline($white, $primary, $primary);
+.btn-light {
+    @include buttn($white6, $body-color, $white6);
+}
+.btn-outline-primary {
+    @include buttn-outline($trans, $primary, $primary);
 }
 
-.btn-secondary-outline {
-    @include buttn-outline($white, $secondary, $secondary);
+.btn-outline-secondary {
+    @include buttn-outline($trans, $secondary, $secondary);
 }
-
-.btn-secondary-outline {
-    @include buttn-outline($white, $tertiary, $tertiary);
+.btn-outline-tertiary {
+    @include buttn-outline($trans, $tertiary, $tertiary);
+}
+.btn-outline-light {
+    @include buttn-outline($trans, $white6, $white6);
+}
+.btn-white {
+    @include buttn($white, $primary, $white);
+}
+.btn-primary-animate {
+    @include btn-animate($primary, $white, $secondary);
+}
+.btn-secondary-animate {
+    @include btn-animate($secondary, $white, $tertiary);
+}
+.btn-tertiary-animate {
+    @include btn-animate($tertiary, $white, $secondary);
+}
+.btn-outline-primary-animate {
+    @include btn-animate($white, $primary, $secondary);
+}
+.btn-outline-secondary-animate {
+    @include btn-animate($white, $secondary, $tertiary);
+}
+.btn-outline-tertiary-animate {
+    @include btn-animate($white, $tertiary, $secondary);
+}
+.btn-circle {
+    @include round(50px);
+}
+.outline-white {
+    @include outline-circle($white);
+}
+.outline-primary {
+    @include outline-circle($primary);
+}
+.outline-secondary {
+    @include outline-circle($secondary);
 }
 // ----------------------------------------------------Form Control-----------------------------------------------------//
 
@@ -104,20 +235,22 @@ button {
     background-color: $primary;
     border-color: $primary;
     box-shadow: none;
+    outline: 0;
 }
 .form-check-inline {
     margin-right: 30px;
 }
-// ----------------------------------------------------Form Control-----------------------------------------------------//
+
 .form-control {
     border: none !important;
     border-bottom: 1px solid $gray1 !important;
     border-radius: 0 !important;
     padding-left: 0 !important;
     font-size: 24px !important;
+    transition: all 0.2s ease-out;
     &:focus {
-        // border: 1px solid $primary !important;
         border-bottom: 2px solid $primary !important;
+        transition: all 0.3s ease-out;
         box-shadow: none !important;
         outline: 0 !important;
         padding-left: 15px !important;
@@ -130,25 +263,491 @@ label {
 textarea {
     resize: none !important;
 }
+.form-check-input:focus {
+    box-shadow: none !important;
+}
+.form-check-label {
+    color: $body-color;
+    opacity: 0.7;
+    font-size: $p !important;
+    font-weight: 400 !important;
+}
+.input-group-text {
+    padding: 0px 20px;
+    background-color: $white;
+    border-radius: $bdr-rds;
+}
+
 // ----------------------------------------------------Placeholder-----------------------------------------------------//
 
-::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: $border;
-    opacity: 0.5;
+.form-control::-webkit-input-placeholder {
+    color: rgba($color: $body-color, $alpha: 0.5);
 }
-::-moz-placeholder {
-    /* Firefox 19+ */
-    color: rgba($color: $border, $alpha: 0.5);
-    opacity: 0.5;
+
+.form-control::-moz-placeholder {
+    color: rgba($color: $body-color, $alpha: 0.5);
 }
-:-ms-input-placeholder {
-    /* IE 10+ */
-    color: $border;
-    opacity: 0.5;
+.form-control:-ms-input-placeholder {
+    color: rgba($color: $body-color, $alpha: 0.5);
 }
-:-moz-placeholder {
-    /* Firefox 18- */
-    color: $border;
-    opacity: 0.5;
+.form-control:placeholder {
+    color: rgba($color: $body-color, $alpha: 0.5);
+}
+// ----------------------------------------------------Mouse Selection-----------------------------------------------------//
+::-moz-selection {
+    /* Code for Firefox */
+    color: $white;
+    background: $primary;
+}
+
+::selection {
+    color: $white;
+    background: $primary;
+}
+// ----------------------------------------------------Nav or Pills-----------------------------------------------------//
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background: $primary;
+    color: $white;
+}
+.nav-pills {
+    .nav-link {
+        color: $primary;
+        background: $white;
+    }
+}
+.tab-content {
+    background-color: $white;
+    padding: 30px;
+    border-radius: $bdr-rds;
+    width: 100%;
+}
+// -------------------------------------------------------------------Accordion--------------------------------------------------------------------//
+.accordion-button,
+.accordion-button:not(.collapsed) {
+    &::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23111' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
+    }
+}
+.accordion-button:not(.collapsed) {
+    &::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23002bdc' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
+    }
+}
+.accordion-button {
+    padding: 50px 0 !important;
+    font-size: 50px !important;
+    // font-family: $akkurat;
+    span {
+        font-family: $ivymode;
+    }
+}
+.accordion-button:not(.collapsed) {
+    color: $primary !important;
+    background-color: $white !important;
+    box-shadow: none !important;
+}
+.accordion-item {
+    border-left: 0 !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 2px solid $bdr !important;
+    &:first-child {
+        border-top: 2px solid $bdr !important;
+    }
+}
+// -------------------------------------------------------------------Toggle Buttons--------------------------------------------------------------------//
+.btn-check:active + .btn-outline-primary:focus,
+.btn-check:checked + .btn-outline-primary:focus,
+.btn-outline-primary.active:focus,
+.btn-outline-primary.dropdown-toggle.show:focus,
+.btn-outline-primary:active:focus {
+    box-shadow: none !important;
+    background-color: $primary;
+}
+.btn-check:active + .btn-outline-primary,
+.btn-check:checked + .btn-outline-primary,
+.btn-outline-primary.active,
+.btn-outline-primary.dropdown-toggle.show,
+.btn-outline-primary:active {
+    box-shadow: none !important;
+    background-color: $primary;
+    border-color: $primary;
+}
+.btn-check:focus + .btn-outline-primary,
+.btn-outline-primary:focus {
+    box-shadow: none !important;
+}
+// ------------------------------------------------------------------Pagination--------------------------------------------------------------------//
+.pagination {
+    .page-item.active .page-link {
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+    }
+    .page-link {
+        color: $primary;
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .page-item:first-child .page-link {
+        border-top-left-radius: $bdr-rds;
+        border-bottom-left-radius: $bdr-rds;
+    }
+    .page-item:last-child .page-link {
+        border-top-right-radius: $bdr-rds;
+        border-bottom-right-radius: $bdr-rds;
+    }
+}
+.pagination-rounded {
+    .page-item {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+    .page-link {
+        border-radius: 30px;
+        padding: 0;
+        @include circle(40px, $white);
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:active,
+        &:focus {
+            box-shadow: none;
+            background-color: $primary;
+            border-color: $primary;
+            color: $white;
+        }
+        &:hover {
+            box-shadow: none;
+            background-color: darken($color: $white, $amount: 5%);
+            color: $primary;
+        }
+    }
+    .page-item:first-child .page-link {
+        width: auto !important;
+    }
+    .page-item:last-child .page-link,
+    .page-item:first-child .page-link {
+        width: auto !important;
+        border-radius: 40px !important;
+        padding: 0px 20px !important;
+    }
+}
+// ------------------------------------------------------------------Breadcrumb--------------------------------------------------------------------//
+.breadcrumb-item + .breadcrumb-item::before {
+    color: $primary;
+}
+// ------------------------------------------------------------------Collapse---------------------------------------------------------------------//
+
+.card-body {
+    padding: 0;
+    border: none;
+    background-color: $trans;
+}
+
+.collapse.show {
+    margin-bottom: 10px;
+}
+// ------------------------------------------------------------------Progress Bar-----------------------------------------------------------------//
+.progress-bar {
+    height: 10px;
+    border-radius: 0 !important;
+    background-color: $primary !important;
+}
+.progress {
+    margin-bottom: 10px;
+    height: 10px !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+// --------------------------------------------------------------------Nav Tabs-----------------------------------------------------------------//
+
+.nav-tabs {
+    border: none !important;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    border-color: $trans !important;
+}
+.nav-tabs {
+    .nav-link:hover::after {
+        display: none;
+    }
+    .nav-link {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        color: $primary;
+    }
+}
+.tab-content {
+    border-top-left-radius: 0 !important;
+    border-radius: $bdr-rds;
+    margin-top: -1px;
+}
+// --------------------------------------------------------------------File Input-----------------------------------------------------------------//
+.hidden-xs-up {
+    // display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.file-input {
+    background-color: $white !important;
+    position: relative;
+}
+// --------------------------------------------------------------------Range Slider-----------------------------------------------------------------//
+
+.form-range::-webkit-slider-thumb {
+    background: $primary !important;
+    box-shadow: none !important;
+}
+
+.form-range::-moz-range-thumb {
+    background: $primary !important;
+    box-shadow: none !important;
+}
+
+.form-range::-ms-thumb {
+    background: $primary !important;
+    box-shadow: none !important;
+}
+input[type="range"] {
+    --thumbSize: 18px;
+    --trackSize: 8px;
+    --thumbBg: #fff;
+    --trackBg: #f2f2f2;
+    --progressBg: #059762;
+
+    /* webkit progress workaround */
+    --webkitProgressPercent: 0%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: var(--thumbSize);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+input[type="range"]:focus {
+    outline: none;
+}
+
+/* Thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: var(--thumbSize);
+    height: var(--thumbSize);
+    background-color: var(--thumbBg);
+    border-radius: calc(var(--thumbSize) / 2);
+    border: none;
+    box-shadow: 0 2px 6px $primary;
+    margin-top: calc(((var(--thumbSize) - var(--trackSize)) / 2) * -1);
+    cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    width: var(--thumbSize);
+    height: var(--thumbSize);
+    background-color: var(--thumbBg);
+    border-radius: calc(var(--thumbSize) / 2);
+    border: none;
+    box-shadow: 0 2px 6px $primary;
+    margin-top: calc(((var(--thumbSize) - var(--trackSize)) / 2) * -1);
+    cursor: pointer;
+}
+input[type="range"]::-ms-thumb {
+    -ms-appearance: none;
+    appearance: none;
+    width: var(--thumbSize);
+    height: var(--thumbSize);
+    background-color: var(--thumbBg);
+    border-radius: calc(var(--thumbSize) / 2);
+    border: none;
+    box-shadow: 0 2px 6px $primary;
+    margin-top: calc(((var(--thumbSize) - var(--trackSize)) / 2) * -1);
+    cursor: pointer;
+}
+
+/* Track */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: var(--trackSize);
+    background-image: linear-gradient(
+        90deg,
+        var(--progressBg) var(--webkitProgressPercent),
+        var(--trackBg) var(--webkitProgressPercent)
+    );
+    border-radius: calc(var(--trackSize) / 2);
+}
+input[type="range"]::-moz-range-track {
+    height: var(--trackSize);
+    background-color: var(--trackBg);
+    border-radius: calc(var(--trackSize) / 2);
+}
+input[type="range"]::-ms-track {
+    height: var(--trackSize);
+    background-color: var(--trackBg);
+    border-radius: calc(var(--trackSize) / 2);
+}
+
+/* Progress */
+input[type="range"]::-moz-range-progress {
+    height: var(--trackSize);
+    background-color: var(--progressBg);
+    border-radius: calc(var(--trackSize) / 2) 0 0 calc(var(--trackSize) / 2);
+}
+input[type="range"]::-ms-fill-lower {
+    height: var(--trackSize);
+    background-color: var(--progressBg);
+    border-radius: calc(var(--trackSize) / 2) 0 0 calc(var(--trackSize) / 2);
+}
+// --------------------------------------------------------------------Combo Box-----------------------------------------------------------------//
+.combo-box {
+    margin-bottom: 50px;
+    .c-label {
+        font-size: 24px !important;
+        font-weight: 300 !important;
+        margin-bottom: 5px !important;
+    }
+    .c-content {
+        font-size: 30px !important;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+// --------------------------------------------------------------------Circle On Hover-----------------------------------------------------------------//
+.circle-on-hover {
+    position: relative;
+    transition: 0.5s all ease-out;
+    &:hover {
+        @include circle(100px, $primary);
+        position: absolute;
+        top: -50px;
+        @include text(24px, 24px, 300, $white);
+        flex-wrap: wrap;
+        word-break: break-word;
+        text-align: center;
+        transition: 0.5s all ease-out;
+    }
+}
+// --------------------------------------------------------------------Arrow UL-----------------------------------------------------------------//
+.arrow-ul {
+    list-style-image: url("../images/svg/ul_arrow.svg");
+    li {
+        font-size: 24px;
+        line-height: 40px;
+        font-weight: 300;
+        font-family: $akkurat;
+        padding-left: 1rem;
+    }
+}
+
+.link-border-100 {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: right;
+    a {
+        font-size: 30px;
+        color: $white;
+        text-decoration: none;
+        justify-content: right;
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+    span {
+        margin-left: 10px;
+    }
+    .underline-div {
+        width: 100%;
+        height: 1px;
+        background-color: $gray3;
+        margin-top: 25px;
+    }
+}
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    i {
+        @include circle(70px, $trans);
+        position: relative;
+        @include text(24px, 24px, 300, $white);
+        flex-wrap: wrap;
+        transition: 0.5s all ease-out;
+        z-index: 1;
+    }
+    &:hover {
+        color: $white;
+        i {
+            background-color: $primary !important;
+        }
+    }
+}
+.link-arrow-primary {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    color: $primary !important;
+    i {
+        @include circle(70px, $trans);
+        position: relative;
+        @include text(24px, 24px, 300, $primary);
+        flex-wrap: wrap;
+        transition: 0.5s all ease-out;
+        z-index: 1;
+    }
+    &:hover {
+        i {
+            &::before {
+                color: $white;
+            }
+            background-color: $primary !important;
+        }
+    }
+}
+.link-arrow-dark {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    color: $secondary !important;
+    i {
+        @include circle(70px, $trans);
+        position: relative;
+        @include text(24px, 24px, 300, $secondary);
+        flex-wrap: wrap;
+        transition: 0.5s all ease-out;
+        z-index: 1;
+    }
+    &:hover {
+        i {
+            &::before {
+                color: $white;
+            }
+            background-color: $primary !important;
+        }
+    }
 }
