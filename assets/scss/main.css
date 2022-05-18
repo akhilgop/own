@@ -1,3 +1,7 @@
+.testimonials {
+  display: none;
+}
+
 .navbar .btn {
   height: 45px;
 }
@@ -927,8 +931,15 @@
     margin-right: 0 !important;
     margin-bottom: 30px !important;
   }
-  .domains .horizondal-ul {
+  .horizondal-ul {
     padding: 0 20px;
+  }
+  .horizondal-ul ul li {
+    font-size: 40px !important;
+    line-height: 1.5 !important;
+    display: block;
+    margin-right: 0 !important;
+    margin-bottom: 30px !important;
   }
   .works p.gs_reveal {
     font-size: 20px !important;
@@ -1077,9 +1088,6 @@
   .services h2 {
     font-size: 40px !important;
   }
-  .services .col-xl-4 {
-    margin-bottom: 40px !important;
-  }
   .manifesto,
   .works,
   .clients {
@@ -1141,8 +1149,15 @@
     margin-right: 0 !important;
     margin-bottom: 30px !important;
   }
-  .domains .horizondal-ul {
+  .horizondal-ul {
     padding: 0 50px 0 25%;
+  }
+  .horizondal-ul ul li {
+    font-size: 40px !important;
+    line-height: 1.5 !important;
+    display: block;
+    margin-right: 0 !important;
+    margin-bottom: 30px !important;
   }
   .ui-panel .quote {
     top: -50px !important;
@@ -1437,6 +1452,10 @@
   .container {
     max-width: 1720px !important;
   }
+}
+
+.testimonials {
+  display: none;
 }
 
 .accordion-button::after,
@@ -2543,7 +2562,8 @@ button:hover, button:active, button:focus,
   }
 }
 
-.text-primary {
+.text-primary,
+a.text-primary {
   color: #002bdc !important;
 }
 
@@ -8877,6 +8897,18 @@ a:hover, a:active, a:focus {
   color: #0021a9;
 }
 
+.text-white-muted {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text-muted-default {
+  color: rgba(102, 102, 102, 0.5) !important;
+}
+
+.text-black-6 {
+  color: #666 !important;
+}
+
 .fw-300 {
   font-weight: 300 !important;
 }
@@ -10973,6 +11005,10 @@ html:not(html:hover) .cursor::after {
           transform: scale(0);
 }
 
+.testimonials {
+  display: none;
+}
+
 .nb {
   z-index: 11;
   background-color: #fff;
@@ -11733,6 +11769,10 @@ html:not(html:hover) .cursor::after {
 
 .offcanvas .nav-link {
   padding-left: 0 !important;
+}
+
+.testimonials {
+  display: none;
 }
 
 .mgn-top-cent {

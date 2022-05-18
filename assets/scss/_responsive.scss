@@ -133,8 +133,15 @@
             margin-right: 0 !important;
             margin-bottom: 30px !important;
         }
-        .horizondal-ul {
-            padding: 0 20px;
+    }
+    .horizondal-ul {
+        padding: 0 20px;
+        ul li {
+            font-size: 40px !important;
+            line-height: 1.5 !important;
+            display: block;
+            margin-right: 0 !important;
+            margin-bottom: 30px !important;
         }
     }
     .works {
@@ -310,9 +317,6 @@
         h2 {
             font-size: 40px !important;
         }
-        .col-xl-4 {
-            margin-bottom: 40px !important;
-        }
     }
     .manifesto,
     .works,
@@ -380,8 +384,15 @@
             margin-right: 0 !important;
             margin-bottom: 30px !important;
         }
-        .horizondal-ul {
-            padding: 0 50px 0 25%;
+    }
+    .horizondal-ul {
+        padding: 0 50px 0 25%;
+        ul li {
+            font-size: 40px !important;
+            line-height: 1.5 !important;
+            display: block;
+            margin-right: 0 !important;
+            margin-bottom: 30px !important;
         }
     }
     .ui-panel .quote {

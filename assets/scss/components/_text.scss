@@ -60,6 +60,15 @@ a {
         color: darken($color: $primary, $amount: 10%);
     }
 }
+.text-white-muted {
+    color: rgba($color: $white, $alpha: 0.5) !important;
+}
+.text-muted-default {
+    color: rgba($color: $body-color, $alpha: 0.5) !important;
+}
+.text-black-6 {
+    color: $black6 !important;
+}
 // ----------------------------------------------------------------Font Sizes---------------------------------------------------------------//
 .fw-300 {
     font-weight: 300 !important;
