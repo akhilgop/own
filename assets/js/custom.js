@@ -79,6 +79,32 @@ revealContainers.forEach((container) => {
     });
 });
 
+gsap.registerPlugin(ScrollTrigger);
+
+let revealContainers1 = document.querySelectorAll(".reveal-right");
+
+revealContainers1.forEach((container) => {
+    let image = container.querySelector("img");
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: container,
+            toggleActions: "restart none none reset"
+        }
+    });
+
+    tl.set(container, { autoAlpha: 1 });
+    tl.from(container, 1.5, {
+        xPercent: 100,
+        ease: Power2.out
+    });
+    tl.from(image, 1.5, {
+        xPercent: -100,
+        scale: 1.3,
+        delay: -1.5,
+        ease: Power2.out
+    });
+});
+
 // ---------------------------------------------------------------------Cursor------------------------------------------------------------------
 const updateProperties = (elem, state) => {
     elem.style.setProperty('--x', `${state.x}px`)
@@ -229,3 +255,4 @@ window.addEventListener("load", function () {
 
     ScrollTrigger.refresh();
 });
+

@@ -66,6 +66,24 @@ a.text-primary {
 .bg-tertiary {
     background-color: $tertiary;
 }
+.bg-tertiary {
+    background-color: $tertiary !important;
+}
+.bg-success {
+    background-color: $success !important;
+}
+.bg-warning {
+    background-color: $warning !important;
+}
+.bg-info {
+    background-color: $info !important;
+}
+.bg-light {
+    background-color: $light !important;
+}
+.bg-dark {
+    background-color: $dark !important;
+}
 div.bg-primary {
     background-color: $primary !important;
 }

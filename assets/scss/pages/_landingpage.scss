@@ -529,6 +529,7 @@
     padding-bottom: 10px;
 }
 .offcanvas {
+    z-index: 2222 !important;
     .nav-link {
         padding-left: 0 !important;
     }

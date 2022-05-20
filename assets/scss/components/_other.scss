@@ -217,18 +217,18 @@
 }
 // ------------------------------------------------------------------Progress Bar-----------------------------------------------------------------//
 .progress-bar {
-    height: 10px;
+    height: 10px !important;
 }
 .progress {
     margin-bottom: 10px;
-    height: 10px;
+    height: 10px !important;
     &:last-child {
         margin-bottom: 0px;
     }
 }
 .progress,
 .progress-bar {
-    border-radius: $form-rds;
+    border-radius: $form-rds !important;
 }
 // --------------------------------------------------------------------File Input-----------------------------------------------------------------//
 .hidden-xs-up {

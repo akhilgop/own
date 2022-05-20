@@ -7,12 +7,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/scss/main.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.min.css" type="text/css" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/images/favicon/site.webmanifest">
     <title>AG</title>
 </head>
@@ -517,9 +519,17 @@
         <!-- -----------------------------------------------------------------------Clients-------------------------------------------------------------->
         <section class="clients" data-bgcolor="#fff">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-xl-9">
-
+                        <div class="owl-carousel owl-theme">
+                            <div> Your Content 1 </div>
+                            <div> Your Content 2 </div>
+                            <div> Your Content 3 </div>
+                            <div> Your Content 4 </div>
+                            <div> Your Content 5 </div>
+                            <div> Your Content 6 </div>
+                            <div> Your Content 7</div>
+                        </div>
                     </div>
                     <div class="col-xl-3">
                         <div class="content">
@@ -537,17 +547,61 @@
         <!-- -----------------------------------------------------------------------Testimonials-------------------------------------------------------------->
         <section class="testimonials gs_reveal" data-bgcolor="#fff">
             <div class="row">
-                <div class="col-xl-2">
+                <div class="col-xl-5">
                 </div>
-                <div class="col-xl-10">
+                <div class="col-xl-7">
+                    <div class="owl-carousel items-1">
+                        <div class="ui-panel bg-secondary p-3 p-xl-10 p-md-7">
+                            <div class="quote">
+                                <img src="assets/images/svg/quote.svg" alt="quote">
+                            </div>
+                            <div class="main-content">
+                                <p class="">Akhil is so skilled and dedicated to his work.
+                                </p>
+                                <p class="">He have a good eye in design and trends.</p>
+                                <p class="">He is fast learner and problem solver.<br></p>
+                                <p class="">I recommend Akhil to any
+                                    frontend design and
+                                    development
+                                    position.<br></p>
+                                <div class="auther-info">
+                                    <h6 class="auther-name quote-auther pe-0">Girish Krishnan G</h6><br>
+                                    <p class="auther-designation quote-auther pe-0">Customer Experience
+                                        Design
+                                    </p><br>
+                                    <p class="auther-designation quote-auther nopad">Etisalat
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-panel bg-secondary">
+                            <div class="quote">
+                                <img src="assets/images/svg/quote.svg" alt="quote">
+                            </div>
+                            <div class="main-content">
+                                <p class="quote-text nopad">Akhil is a talented professional with great
+                                    Design ideas.
+                                </p>
+                                <p class="quote-text nopad">He is extremely flexible and always available
+                                    for the team.</p>
+
+
+                                <div class="auther-info">
+                                    <h6 class="auther-name quote-auther pe-0">Ted Bilford</h6><br>
+                                    <p class="auther-designation quote-auther pe-0">Project Manager
+                                    </p><br>
+                                    <p class="auther-designation quote-auther nopad">EY
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="carouselExampleInterval"
-                        class="carousel slide ui-panel bg-secondary position-relative  pt-xl-15 px-xl-10 pb-xl-10"
+                        class="carousel slide ui-panel bg-secondary position-relative  pt-xl-15 px-xl-10 pb-xl-10 d-none"
                         data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="3000">
                                 <div class="">
                                     <div class="quote">
-                                        <img src="images/svg/quote.svg" alt="quote">
+                                        <img src="assets/images/svg/quote.svg" alt="quote">
                                     </div>
                                     <div class="main-content">
                                         <p class="">Akhil is so skilled and dedicated to his work.
@@ -572,7 +626,7 @@
                             <div class="carousel-item" data-bs-interval="3000">
                                 <div class="ui-panel">
                                     <div class="quote">
-                                        <img src="images/svg/quote.svg" alt="quote">
+                                        <img src="assets/images/svg/quote.svg" alt="quote">
                                     </div>
                                     <div class="main-content">
                                         <p class="quote-text nopad">Akhil is a talented professional with great
@@ -718,6 +772,34 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- -------------------------------------------------------------Owl Carousal----------------------------------------------------- -->
+    <script>
+        $(document).ready(function () {
+            var owl = $('.owl-carousel.owl-theme');
+            owl.owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true
+            });
+        });
+        $(document).ready(function () {
+            var owl = $('.owl-carousel.items-1');
+            owl.owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                autoHeight: false
+
+            });
+        });
+    </script>
 </body>
 
 </html>
