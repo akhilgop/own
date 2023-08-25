@@ -16,28 +16,28 @@ $trans: transparent;
 // ----------------------------------------------------Dark Versions----------------------------------------------//
 $primary-dark: darken(
     $color: $primary,
-    $amount: 10%,
+    $amount: 10%
 );
 $secondary-dark: darken(
     $color: $secondary,
-    $amount: 10%,
+    $amount: 10%
 );
 $tertiary-dark: darken(
     $color: $tertiary,
-    $amount: 10%,
+    $amount: 10%
 );
 // ----------------------------------------------------Light Versions---------------------------------------------//
 $primary-light: rgba(
     $color: $primary,
-    $alpha: 0.1,
+    $alpha: 0.1
 );
 $secondary-light: rgba(
     $color: $secondary,
-    $alpha: 0.1,
+    $alpha: 0.1
 );
 $tertiary-light: rgba(
     $color: $tertiary,
-    $alpha: 0.1,
+    $alpha: 0.1
 );
 // ----------------------------------------------------Other Colors----------------------------------------------//
 $color1: #d9534f;
@@ -140,7 +140,7 @@ $line-height-lg: 1.8;
 $line-height-xl: 2;
 // -------------------------------------------------------Font--------------------------------------------------//
 $akkurat: "Akkurat";
-$ivymode: "Ivy Mode";
+$ivymode: "IvyMode";
 // ----------------------------------------------------Padding--------------------------------------------------//
 $pad-sm: 10px;
 $pad-default: 20px;
